@@ -3,65 +3,45 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Blog</title>
+		<title>Register</title>
 		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 	</head>
-	<body class="">
-		<header>PLACEHOLDER FOR TONI'S HEADER</header>
-		<main class="bg-[#073b3a]">
-			<h1
-				class="border-2 border-red-500 text-center text-xl p-8 tracking-widest"
-			>
-				Blog
+	<body class="size-[100%] bg-[#073b3a]">
+		<header>
+			<!-- Tonis Content -->
+		</header>
+		<main class="size-[100%] bg-[#6BBF59]">
+			<h1 class="text-center pb-8 bg-[#073b3a] text-slate-50">
+				Get yourself an account!
 			</h1>
-			<!-- try loop to get rid of redundancy for Blogs -->
-			<section
-				class="border-2 border-blue-500 bg-[#6BBF59] p-4 flex-col items-center"
-			>
-				<h2 class="text-center pb-8">Headline of first blog post</h2>
-				<div class="flex">
-					<article>
-						get some random text as placeholder for now. add
-						something more to bloat it up. bloat it up more.... and
-						more....
-					</article>
-					<figure>
-						<img src="" alt="First Pic" />
-						<figcaption></figcaption>
-					</figure>
-				</div>
-			</section>
-			<section
-				class="border-2 border-red-500 bg-[#08A045] p-4 flex-col items-center"
-			>
-				<h2 class="text-center pb-8">Headline of second blog post</h2>
-				<div class="flex">
-					<article>
-						get some random text as placeholder for now. add
-						something more to bloat it up. bloat it up more.... and
-						more....
-					</article>
-					<figure>
-						<img src="" alt="First Pic" />
-						<figcaption></figcaption>
-					</figure>
-				</div>
-			</section>
-			<section
-				class="border-2 border-blue-500 bg-[#6BBF59] p-4 flex-col items-center"
-			>
-				<h2 class="text-center pb-8">Headline of third blog post</h2>
-				<div class="flex">
-					<article>
-						get some random text as placeholder for now. add
-						something more to bloat it up. bloat it up more.... and
-						more....
-					</article>
-					<figure>
-						<img src="" alt="First Pic" />
-						<figcaption></figcaption>
-					</figure>
-				</div>
+			<!-- Section for login page -->
+			<section class="pt-16 pb-16">
+				<form
+					class="p-4 flex flex-col justify-center items-center text-center"
+				>
+					<label for="name">Enter your name here:</label>
+					<input
+						type="text"
+						id="name"
+						name="name"
+						required
+						class="bg-slate-50 m-4 border-1"
+					/>
+					<label for="email">Enter your E-Mail here:</label>
+					<input
+						type="text"
+						id="email"
+						name="email"
+						required
+						class="bg-slate-50 m-4 border-1"
+					/>
+					<button
+						type="submit"
+						class="bg-[#073b3a] w-fit pl-8 pr-8 pt-2 pb-2 text-slate-50"
+					>
+						Register now!
+					</button>
+				</form>
 			</section>
 		</main>
 		<footer
