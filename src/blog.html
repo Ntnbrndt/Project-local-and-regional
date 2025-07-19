@@ -10,51 +10,66 @@
 		<header>PLACEHOLDER FOR TONI'S HEADER</header>
 		<main class="bg-[#073b3a]">
 			<h1
-				class="border-2 border-red-500 text-center text-xl p-8 tracking-widest"
+				class="border-2 border-red-500 text-center text-5xl p-8 tracking-widest"
 			>
 				Blog
 			</h1>
 			<!-- try loop to get rid of redundancy for Blogs -->
-			<section
-				class="border-2 border-blue-500 bg-[#6BBF59] p-4 flex-col items-center"
-			>
-				<h2 class="text-center pb-8">
+			<section class="border-2 border-blue-500 bg-[#6BBF59] p-4">
+				<h2 class="text-center pb-8 font-bold">
 					The Secret Ingredient in Every Loaf: A Visit to 'The Gilded
 					Crumb' Bakery
 				</h2>
-				<article>
-					<figure>
-						<img src="" alt="First Pic" />
-						<figcaption></figcaption>
+				<!-- Start of article -->
+				<article class="border-2 border-blue-500">
+					<!-- nested imagage and figcation -->
+					<figure class="border-2 pb-4">
+						<!-- create link to seller page? -> nest img in anchor -->
+						<img
+							src="./assets/organic-whole-grain-baguette-placed-linen-fabric.jpg"
+							alt="By KamranAydinov From Freepik"
+						/>
+						<figcaption class="font-semibold text-right mt-4">
+							Take a look at this nice looking bread!
+						</figcaption>
 					</figure>
-					You know the smell. That warm, comforting scent of
-					fresh-baked bread that seems to drift down Elm Street every
-					morning, inviting you to start your day right. That's the
-					scent of "The Gilded Crumb," a small bakery that has become
-					a big part of our town's heart. At a time when so much is
-					mass-produced, co-owners Lena and Marco are true artisans.
-					Their philosophy is simple: good food starts with good
-					ingredients and a whole lot of patience. We sat down with
-					them to talk about their most popular creation, the
-					sourdough boule that locals can't get enough of. What's the
-					secret? It's not just the flour or the water; it's their
-					50-year-old sourdough starter, affectionately named "Old Man
-					Ernest." Lena explains, "He's been passed down through
-					generations of bakers in my family. He has a life of his
-					own, and every day, he changes the flavor profile just a
-					little." This unique starter gives the bread its distinct,
-					tangy flavor and a perfectly chewy texture. It's a reminder
-					that some things are worth waiting for. Every loaf is shaped
-					by hand, baked to a golden crust, and sold with a smile.
-					Next time you're near the town square, stop by The Gilded
-					Crumb. Whether you're grabbing a warm boule for dinner or a
-					flaky croissant for your morning commute, you're not just
-					buying a baked good—you're getting a piece of local history,
-					a bit of artisan magic, and a whole lot of heart.
-					<span>Written by: The Local Artisan</span>
+					<!-- paragraph for main text, make it expandable-->
+					<p class="text-justify">
+						You know the smell. That warm, comforting scent of
+						fresh-baked bread that seems to drift down Elm Street
+						every morning, inviting you to start your day right.
+						That's the scent of "The Gilded Crumb," a small bakery
+						that has become a big part of our town's heart. At a
+						time when so much is mass-produced, co-owners Lena and
+						Marco are true artisans. Their philosophy is simple:
+						good food starts with good ingredients and a whole lot
+						of patience. We sat down with them to talk about their
+						most popular creation, the sourdough boule that locals
+						can't get enough of. What's the secret? It's not just
+						the flour or the water; it's their 50-year-old sourdough
+						starter, affectionately named "Old Man Ernest." Lena
+						explains, "He's been passed down through generations of
+						bakers in my family. He has a life of his own, and every
+						day, he changes the flavor profile just a little." This
+						unique starter gives the bread its distinct, tangy
+						flavor and a perfectly chewy texture. It's a reminder
+						that some things are worth waiting for. Every loaf is
+						shaped by hand, baked to a golden crust, and sold with a
+						smile. Next time you're near the town square, stop by
+						The Gilded Crumb. Whether you're grabbing a warm boule
+						for dinner or a flaky croissant for your morning
+						commute, you're not just buying a baked good—you're
+						getting a piece of local history, a bit of artisan
+						magic, and a whole lot of heart.
+					</p>
+					<!-- Span for author -->
+					<span class="block pt-4 text-right text-sl font-semibold"
+						>Written by: The Local Artisan</span
+					>
 				</article>
 			</section>
-			<section
+			<!-- commented out while restyling the blog entry, copy paste content in new design later -->
+			<!-- <section
 				class="border-2 border-red-500 bg-[#08A045] p-4 flex-col items-center"
 			>
 				<h2 class="text-center pb-8">
@@ -223,7 +238,7 @@
 					<span>Written by: SmokeOne</span>
 					comments below!
 				</article>
-			</section>
+			</section> -->
 		</main>
 		<footer
 			class="flex flex-col items-center p-8 pb-12 bg-[#073b3a] w-[100%] text-slate-50"
