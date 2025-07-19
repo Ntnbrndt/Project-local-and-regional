@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Register</title>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	</head>
+	<body class="size-[100%] bg-[#073b3a]">
+		<header>
+			<!-- Tonis Content -->
+		</header>
+		<main class="size-[100%] bg-[#6BBF59]">
+			<h1 class="text-center pb-8 bg-[#073b3a] text-slate-50">
+				Get yourself an account!
+			</h1>
+			<!-- Section for login page -->
+			<section class="pt-16 pb-16">
+				<form
+					class="p-4 flex flex-col justify-center items-center text-center"
+				>
+					<label for="name">Enter your name here:</label>
+					<input
+						type="text"
+						id="name"
+						name="name"
+						required
+						class="bg-slate-50 m-4 border-1"
+					/>
+					<label for="email">Enter your E-Mail here:</label>
+					<input
+						type="text"
+						id="email"
+						name="email"
+						required
+						class="bg-slate-50 m-4 border-1"
+					/>
+					<button
+						type="submit"
+						class="bg-[#073b3a] w-fit pl-8 pr-8 pt-2 pb-2 text-slate-50"
+					>
+						Register now!
+					</button>
+				</form>
+			</section>
+		</main>
+		<footer
+			class="flex flex-col items-center p-8 pb-12 bg-[#073b3a] w-[100%] text-slate-50"
+		>
+			<h2 class="pb-8">Contact Us</h2>
+			<!-- Section for contact information -->
+			<section class="mb-8">
+				<span class="text-xl font-bold">Adress Information</span>
+				<!-- use an unordered list -->
+				<ul class="list-none mt-4">
+					<!-- nest span inside list element for styling -->
+					<li>
+						<span class="font-bold">Owner:</span> Some Random Person
+					</li>
+					<li>
+						<span class="font-bold">Street:</span> Somewhere in
+						nowhere
+					</li>
+					<li>
+						<span class="font-bold">City:</span> Some random town
+					</li>
+				</ul>
+			</section>
+
+			<!-- Section for links and nested images -->
+			<section class="flex flex-row size-[100%] justify-around">
+				<a href="https://www.instagram.com/">
+					<img
+						src="https://static.cdninstagram.com/rsrc.php/v4/yI/r/VsNE-OHk_8a.png"
+						alt="Instagram"
+						class="w-10 h-10"
+					/>
+				</a>
+				<a href="https://www.facebook.de">
+					<img
+						src="https://www.facebook.com/images/fb_icon_325x325.png"
+						alt="Facebook"
+						class="w-10 h-10"
+					/>
+				</a>
+				<a href="https://www.youtube.com">
+					<img
+						src="https://www.youtube.com/s/desktop/2253fa3d/img/logos/favicon.ico"
+						alt="Youtube"
+						class="w-10 h-10"
+					/>
+				</a>
+				<a href="https://www.linkedin.com">
+					<img
+						src="https://static.licdn.com/aero-v1/sc/h/5bukxbhy9xsil5mb7c2wulfbx"
+						alt="linkedIn"
+						class="w-10 h-10"
+					/>
+				</a>
+			</section>
+		</footer>
+	</body>
+</html>

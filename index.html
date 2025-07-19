@@ -1,280 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Start</title>
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<header class="bg-green-600 text-green "> <!-- align next to each other-->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Start</title>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	</head>
+	<header class="bg-green-600 text-green">
+		<!-- align next to each other-->
 
-    <div class="flex items-center justify-between gap-4 max-w-screen-xl mx-auto">
-        <!-- slidemenu left -->
-        <div class="relative left-3">
-            <!-- checks state -->
-            <input type="checkbox" id="menu-toggle" class="peer hidden">
+		<div
+			class="flex items-center justify-between gap-4 max-w-screen-xl mx-auto"
+		>
+			<!-- slidemenu left -->
+			<div class="relative left-3">
+				<!-- checks state -->
+				<input type="checkbox" id="menu-toggle" class="peer hidden" />
 
-            <!-- menubutton -->
-            <label for="menu-toggle" class="p-4">
-                <!-- 3 horizontal stripes -->
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </label>
+				<!-- menubutton -->
+				<label for="menu-toggle" class="p-4">
+					<!-- 3 horizontal stripes -->
+					<svg
+						class="w-6 h-6"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						viewBox="0 0 24 24"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M4 6h16M4 12h16M4 18h16"
+						/>
+					</svg>
+				</label>
 
-            <!-- Menu Sidebar-->
-            <div class="fixed top-[Xpx] left-0 h-full w-64 bg-green-900 text-gray-100 shadow-md transform -translate-x-full 
-            peer-checked:translate-x-0 transition-transform  duration-300 z-50 ">
-                <div class="p-4">
-                    <ul class="space-y-4">
-                        <li><a href="#" class="block">Home</a></li>
-                        <li><a href="#" class="block">Categories</a></li>
-                        <li><a href="#" class="block">Vendors</a></li>
-                        <li><a href="#" class="block">Blog</a></li>
-                        <li><a href="#" class="block">wasweißich</a></li>
-                        <li><a href="#" class="block">Settings</a></li>
-                    </ul>
-                </div>
+				<!-- Menu Sidebar-->
+				<div
+					class="fixed top-[Xpx] left-0 h-full w-64 bg-green-900 text-gray-100 shadow-md transform -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 z-50"
+				>
+					<div class="p-4">
+						<ul class="space-y-4">
+							<li><a href="#" class="block">Home</a></li>
+							<li><a href="#" class="block">Categories</a></li>
+							<li><a href="#" class="block">Vendors</a></li>
+							<li><a href="#" class="block">Blog</a></li>
+							<li><a href="#" class="block">wasweißich</a></li>
+							<li><a href="#" class="block">Settings</a></li>
+						</ul>
+					</div>
 
-                <div class="p-4 border-t border-green-800 text-sm text-gray-400">
-                    <p>&copy; 2025 Flori and Toni learn Webdesign</p>
-                    <a href="#" class="hover:text-gray-200 block mt-2">Privacy Policy</a>
-                </div>
-            </div>
-        </div>
+					<div
+						class="p-4 border-t border-green-800 text-sm text-gray-400"
+					>
+						<p>&copy; 2025 Flori and Toni learn Webdesign</p>
+						<a href="#" class="hover:text-gray-200 block mt-2"
+							>Privacy Policy</a
+						>
+					</div>
+				</div>
+			</div>
 
-    
-        <!-- locationsearchbar-->
-        <div class="relative w-full max-w-md mx-auto p-4">
-            <input
-            id="search-input"
-            type="text"
-            placeholder="Enter postal code or city"
-            class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600"
-            autocomplete="off"
-            />
+			<!-- locationsearchbar-->
+			<div class="relative w-full max-w-md mx-auto p-4">
+				<input
+					id="search-input"
+					type="text"
+					placeholder="Enter postal code or city"
+					class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600"
+					autocomplete="off"
+				/>
 
-            <!-- Search icon -->
-            <svg
-                class="w-5 h-5 text-gray-400 absolute top-1/2 right-7 -translate-y-1/2 pointer-events-none"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24">
+				<!-- Search icon -->
+				<svg
+					class="w-5 h-5 text-gray-400 absolute top-1/2 right-7 -translate-y-1/2 pointer-events-none"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					viewBox="0 0 24 24"
+				>
+					<circle
+						cx="11"
+						cy="11"
+						r="7"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+					<line
+						x1="21"
+						y1="21"
+						x2="16.65"
+						y2="16.65"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+				</svg>
 
-                <circle cx="11" cy="11" r="7" stroke-linecap="round" stroke-linejoin="round" />
-                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-
-            <!-- Suggestion list: Autocomplete
+				<!-- Suggestion list: Autocomplete
             <ul id="suggestions" class="absolute left-0 right-0 mt-1 bg-white border border-gray-300 rounded-md shadow-lg z-10 hidden">
             Suggestions will be injected here 
             </ul>-->
-        </div>
-        
-            
-        <div class="relative "> <!-- here add rightbound and link to other sidebar -->
-            <!-- checks state -->
-            <input type="checkbox" id="right-menu-toggle" class="peer hidden">
+			</div>
 
-            <!-- menubutton -->
-            <label for="right-menu-toggle" class="p-4">
-                <img src="" 
-                alt="log in/profile"  
-                class="w-8 h-8">
-            </label>
+			<div class="relative">
+				<!-- here add rightbound and link to other sidebar -->
+				<!-- checks state -->
+				<input
+					type="checkbox"
+					id="right-menu-toggle"
+					class="peer hidden"
+				/>
 
-            <!-- content -->
-            <div class="fixed top-[Xpx] left-0 h-full w-64 bg-green-900 text-gray-100 shadow-md transform -translate-x-full 
-            peer-checked:translate-x-0 transition-transform  duration-300 z-50 ">
-                Here Log In Form
-            </div>
-        
-            <!-- Footer if wanted -->
-                <div class="p-4 border-t border-green-800 text-sm text-gray-400">
-                    <p> </p>
-                    <a> </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+				<!-- menubutton -->
+				<label for="right-menu-toggle" class="p-4">
+					<img src="" alt="log in/profile" class="w-8 h-8" />
+				</label>
 
-<body>
+				<!-- content -->
+				<div
+					class="fixed top-[Xpx] left-0 h-full w-64 bg-green-900 text-gray-100 shadow-md transform -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 z-50"
+				>
+					<section class="flex-col p-4">
+						<span class="block text-center">Login</span>
+						<div class="m-4 mt-8">
+							<label for="username">Benutzername</label>
+							<input
+								type="text"
+								id="username"
+								name="username"
+								required
+								class="border-1"
+							/>
+						</div>
+						<div class="m-4 mt-8">
+							<label for="password">Password</label>
+							<input
+								type="text"
+								name="password"
+								id="password"
+								required
+								class="border-1"
+							/>
+						</div>
+						<button class="bg-[#073b3a] px-8 py-2">Login</button>
+					</section>
+					<!-- Section mit Links zu anderen lokalen Webseiten -->
+					<section class="p-4 flex-col">
+						<a
+							href="src/register.html"
+							class="bg-[#073b3a] px-4 py-2 block text-center mb-4"
+							>Register</a
+						>
+						<a
+							href="src/resetPassword.html"
+							class="bg-[#073b3a] px-4 py-2 block text-center mb-4"
+							>Forgot your Password?</a
+						>
+					</section>
+				</div>
 
-    <section class="relative py-4 px-2 max-w-full overflow-hidden">
-        <div id="carousel" class="flex items-start space-x-6 overflow-x-auto scrollbar-hide scroll-smooth">
-          
-            <!-- categorys -->
-          <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
-            <a href="link-to-category-list">
-              <img src="https://cdn-icons-png.flaticon.com/512/7511/7511667.png "
-                alt="Farm Shops & Markets"
-                class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto" /> <!-- greyscale -->
-            </a>
-            <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
-              Farm Shops & Markets
-            </figcaption>
-          </figure>
-      
-          <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
-            <a href="link-to-category-list">
-              <img src="https://static.thenounproject.com/png/244919-200.png" 
-                alt="Sharing & Swaps"
-                class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto" />
-            </a>
-            <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
-              Sharing & Swaps
-            </figcaption>
-          </figure>
-      
-          <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
-            <a href="link-to-category-list">
-              <img src="https://img.freepik.com/premium-vector/craftsman-cross-icon-design-perfect-craftsmanship-artisanal-brands_706143-4467.jpg" 
-                alt="Craftsmen"
-                class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto" />
-            </a>
-            <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
-              Handcrafts experts
-            </figcaption>
-          </figure>
-      
-          <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
-            <a href="link-to-category-list">
-              <img src="https://cdn1.vectorstock.com/i/1000x1000/91/95/upcycled-icon-vector-47879195.jpg" 
-                alt="Repairs & Upcycling"
-                class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto" />
-            </a>
-            <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
-              Repairs & Upcycling
-            </figcaption>
-          </figure>
-            
-          <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
-            <a href="link-to-category-list">
-              <img src="https://www.creativefabrica.com/wp-content/uploads/2021/06/04/Restaurant-icon-10-Graphics-12908030-1-1-580x386.jpg" 
-                alt="Gardening"
-                class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto" />
-            </a>
-            <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
-              Restaurants & Local Food
-            </figcaption>
-          </figure>
-      
-          <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
-            <a href="link-to-category-list">
-              <img src="https://png.pngtree.com/png-vector/20230428/ourmid/pngtree-creative-workshop-line-icon-vector-png-image_6740078.png" 
-                alt="Workshops & Classes"
-                class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto" />
-            </a>
-            <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
-              Workshops & Classes
-            </figcaption>
-          </figure>
+				<!-- Footer if wanted -->
+				<div
+					class="p-4 border-t border-green-800 text-sm text-gray-400"
+				>
+					<p></p>
+					<a> </a>
+				</div>
+			</div>
+		</div>
+	</header>
 
-          <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
-            <a href="link-to-category-list">
-              <img src="https://cdn-icons-png.flaticon.com/512/3058/3058072.png" 
-                alt="Neighborhood help"
-                class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto" />
-            </a>
-            <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
-              Neighboorhood Help
-            </figcaption>
-          </figure>
+	<body>
+		<section class="relative py-4 px-2 max-w-full overflow-hidden">
+			<div
+				id="carousel"
+				class="flex items-start space-x-6 overflow-x-auto scrollbar-hide scroll-smooth"
+			>
+				<!-- categorys -->
+				<figure
+					class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center"
+				>
+					<a href="link-to-category-list">
+						<img
+							src="https://cdn-icons-png.flaticon.com/512/7511/7511667.png "
+							alt="Farm Shops & Markets"
+							class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto"
+						/>
+						<!-- greyscale -->
+					</a>
+					<figcaption
+						class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden"
+					>
+						Farm Shops & Markets
+					</figcaption>
+				</figure>
 
-          <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
-            <a href="link-to-category-list">
-              <img src="https://media.istockphoto.com/id/1304099238/de/vektor/car-sharing-vektor-symbol.jpg?s=612x612&w=0&k=20&c=gOdYMr0lsgCFnJCxKubUkvhY_rRIh4jrenOFScE6Fz0=" 
-                alt="Carsharing"
-                class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto" />
-            </a>
-            <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
-              Carsharing & Mobility
-            </figcaption>
-          </figure>
+				<figure
+					class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center"
+				>
+					<a href="link-to-category-list">
+						<img
+							src="https://static.thenounproject.com/png/244919-200.png"
+							alt="Sharing & Swaps"
+							class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto"
+						/>
+					</a>
+					<figcaption
+						class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden"
+					>
+						Sharing & Swaps
+					</figcaption>
+				</figure>
 
-        </div>
-      
-        <!-- Scroll button -->
-        <button
-          id="scrollNext"
-          aria-label="Scroll categories right"
-          class="absolute top-0 right-0 h-full w-10 bg-green-200 flex items-center justify-center cursor-pointer select-none hover:bg-green-300"
-        >
-          <span class="text-xl text-green-800">&#9654;</span>
-        </button>
-      </section>
+				<figure
+					class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center"
+				>
+					<a href="link-to-category-list">
+						<img
+							src="https://img.freepik.com/premium-vector/craftsman-cross-icon-design-perfect-craftsmanship-artisanal-brands_706143-4467.jpg"
+							alt="Craftsmen"
+							class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto"
+						/>
+					</a>
+					<figcaption
+						class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden"
+					>
+						Handcrafts experts
+					</figcaption>
+				</figure>
 
+				<figure
+					class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center"
+				>
+					<a href="link-to-category-list">
+						<img
+							src="https://cdn1.vectorstock.com/i/1000x1000/91/95/upcycled-icon-vector-47879195.jpg"
+							alt="Repairs & Upcycling"
+							class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto"
+						/>
+					</a>
+					<figcaption
+						class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden"
+					>
+						Repairs & Upcycling
+					</figcaption>
+				</figure>
 
-      <!-- JS making it scrollable -->
-      <script>
-        const carousel = document.getElementById('carousel');
-        const scrollNextBtn = document.getElementById('scrollNext');
-      
-        scrollNextBtn.addEventListener('click', () => {
-          carousel.scrollBy({
-            left: 100, // Adjust scroll amount (px) as needed
-            behavior: 'smooth'
-          });
-        });
-      </script>
+				<figure
+					class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center"
+				>
+					<a href="link-to-category-list">
+						<img
+							src="https://www.creativefabrica.com/wp-content/uploads/2021/06/04/Restaurant-icon-10-Graphics-12908030-1-1-580x386.jpg"
+							alt="Gardening"
+							class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto"
+						/>
+					</a>
+					<figcaption
+						class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden"
+					>
+						Restaurants & Local Food
+					</figcaption>
+				</figure>
 
+				<figure
+					class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center"
+				>
+					<a href="link-to-category-list">
+						<img
+							src="https://png.pngtree.com/png-vector/20230428/ourmid/pngtree-creative-workshop-line-icon-vector-png-image_6740078.png"
+							alt="Workshops & Classes"
+							class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto"
+						/>
+					</a>
+					<figcaption
+						class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden"
+					>
+						Workshops & Classes
+					</figcaption>
+				</figure>
 
-    <!-- Searchbar  -->
-    <section class=""> <!-- class: lower line  -->
-        <div class="relative w-full max-w-md mx-auto p-4">
-            <input
-              id="search-input"
-              type="text"
-              placeholder="search"
-              class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600"
-              autocomplete="off"
-            />
-    
-            <!-- Search icon -->
-            <label for="enter" class="p-4">
-            <svg
-                class="w-5 h-5 text-gray-400 absolute top-1/2 right-7 -translate-y-1/2 pointer-events-none"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24">
-    
-                <circle cx="11" cy="11" r="7" stroke-linecap="round" stroke-linejoin="round" />
-                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            </label>
-        </div>
-    </section>
+				<figure
+					class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center"
+				>
+					<a href="link-to-category-list">
+						<img
+							src="https://cdn-icons-png.flaticon.com/512/3058/3058072.png"
+							alt="Neighborhood help"
+							class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto"
+						/>
+					</a>
+					<figcaption
+						class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden"
+					>
+						Neighboorhood Help
+					</figcaption>
+				</figure>
 
-    <!-- Blogposts Preview -->
+				<figure
+					class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center"
+				>
+					<a href="link-to-category-list">
+						<img
+							src="https://media.istockphoto.com/id/1304099238/de/vektor/car-sharing-vektor-symbol.jpg?s=612x612&w=0&k=20&c=gOdYMr0lsgCFnJCxKubUkvhY_rRIh4jrenOFScE6Fz0="
+							alt="Carsharing"
+							class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto"
+						/>
+					</a>
+					<figcaption
+						class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden"
+					>
+						Carsharing & Mobility
+					</figcaption>
+				</figure>
+			</div>
 
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
-        <div class="bg-white shadow-md rounded-xl p-6">
-            <h2 class="text-xl font-semibold mb-2">Blogpost 1 Title</h2>
-            <p class="text-gray-700">This is the first paragraph of the first blog post. It gives a short preview of the content.</p>
-        </div>
+			<!-- Scroll button -->
+			<button
+				id="scrollNext"
+				aria-label="Scroll categories right"
+				class="absolute top-0 right-0 h-full w-10 bg-green-200 flex items-center justify-center cursor-pointer select-none hover:bg-green-300"
+			>
+				<span class="text-xl text-green-800">&#9654;</span>
+			</button>
+		</section>
 
-        <div class="bg-white shadow-md rounded-xl p-6">
-            <h2 class="text-xl font-semibold mb-2">Blogpost 2 Title</h2>
-            <p class="text-gray-700">This is the first paragraph of the second blog post. It offers a teaser of what the blog covers.</p>
-        </div>
-    </section>
-  
-    <!-- Map  -->
-    <section class="p-5">
-        <iframe 
-          title="Map" 
-          src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik"
-          class="w-full h-[300px] border-0"
-          allowfullscreen
-          loading="lazy"
-        ></iframe>
-      </section>
-      
-    <footer>
-        Done by Florian: Impressum Insta etc
-    </footer>
-</body>
+		<!-- JS making it scrollable -->
+		<script>
+			const carousel = document.getElementById("carousel");
+			const scrollNextBtn = document.getElementById("scrollNext");
+
+			scrollNextBtn.addEventListener("click", () => {
+				carousel.scrollBy({
+					left: 100, // Adjust scroll amount (px) as needed
+					behavior: "smooth",
+				});
+			});
+		</script>
+
+		<!-- Searchbar  -->
+		<section class="">
+			<!-- class: lower line  -->
+			<div class="relative w-full max-w-md mx-auto p-4">
+				<input
+					id="search-input"
+					type="text"
+					placeholder="search"
+					class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600"
+					autocomplete="off"
+				/>
+
+				<!-- Search icon -->
+				<label for="enter" class="p-4">
+					<svg
+						class="w-5 h-5 text-gray-400 absolute top-1/2 right-7 -translate-y-1/2 pointer-events-none"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						viewBox="0 0 24 24"
+					>
+						<circle
+							cx="11"
+							cy="11"
+							r="7"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+						<line
+							x1="21"
+							y1="21"
+							x2="16.65"
+							y2="16.65"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+				</label>
+			</div>
+		</section>
+
+		<!-- Blogposts Preview -->
+
+		<section class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
+			<div class="bg-white shadow-md rounded-xl p-6">
+				<h2 class="text-xl font-semibold mb-2">Blogpost 1 Title</h2>
+				<p class="text-gray-700">
+					This is the first paragraph of the first blog post. It gives
+					a short preview of the content.
+				</p>
+			</div>
+
+			<div class="bg-white shadow-md rounded-xl p-6">
+				<h2 class="text-xl font-semibold mb-2">Blogpost 2 Title</h2>
+				<p class="text-gray-700">
+					This is the first paragraph of the second blog post. It
+					offers a teaser of what the blog covers.
+				</p>
+			</div>
+		</section>
+
+		<!-- Map  -->
+		<section class="p-5">
+			<iframe
+				title="Map"
+				src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik"
+				class="w-full h-[300px] border-0"
+				allowfullscreen
+				loading="lazy"
+			></iframe>
+		</section>
+
+		<footer>Done by Florian: Impressum Insta etc</footer>
+	</body>
 </html>
