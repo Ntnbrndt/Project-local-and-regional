@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Categories</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+
+<header class="bg-green-600 text-green ">
+
+    <div class="flex items-center justify-between gap-4 max-w-screen-xl mx-auto">
+        <!-- slidemenu left -->
+        <div class="relative left-3">
+            <!-- checks state -->
+            <input type="checkbox" id="menu-toggle" class="peer hidden">
+
+            <!-- menubutton -->
+            <label for="menu-toggle" class="p-4">
+                <!-- 3 horizontal stripes -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </label>
+
+            <!-- Menu Sidebar-->
+            <div class="fixed top-[Xpx] left-0 h-full w-64 bg-green-900 text-gray-100 shadow-md transform -translate-x-full 
+            peer-checked:translate-x-0 transition-transform  duration-300 z-50 ">
+                <div class="p-4">
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="block">Home</a></li>
+                        <li><a href="categories.html" class="block">Categories</a></li>
+                        <li><a href="#" class="block">Vendors</a></li>
+                        <li><a href="#" class="block">Blog</a></li>
+                        <li><a href="#" class="block">Settings</a></li>
+                    </ul>
+                </div>
+
+                <div class="p-4 border-t border-green-800 text-sm text-gray-400">
+                    <p>&copy; 2025 Flori and Toni learn Webdesign</p>
+                    <a href="#" class="hover:text-gray-200 block mt-2">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+
+    
+        <!-- locationsearchbar-->
+        <div class="relative w-full max-w-md mx-auto p-4">
+            <input
+            id="search-input"
+            type="text"
+            placeholder="Enter postal code or city"
+            class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600"
+            autocomplete="off"
+            />
+
+            <!-- Search icon -->
+            <svg
+                class="w-5 h-5 text-gray-400 absolute top-1/2 right-7 -translate-y-1/2 pointer-events-none"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24">
+
+                <circle cx="11" cy="11" r="7" stroke-linecap="round" stroke-linejoin="round" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <!-- Suggestion list: Autocomplete
+            <ul id="suggestions" class="absolute left-0 right-0 mt-1 bg-white border border-gray-300 rounded-md shadow-lg z-10 hidden">
+            Suggestions will be injected here 
+            </ul>-->
+        </div>
+        
+            
+        <div class="relative right-3">
+            <!-- checks state -->
+            <input type="checkbox" id="right-menu-toggle" class="peer hidden">
+
+            <!-- login button -->
+            <label for="right-menu-toggle" >
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAmVBMVEVonzn///9onzdlnjRhmi77/Plxo0Sgw4PN373o8OP///3v9OvV5MhfmyttoT1qnjmQum/d69KlxYjp9eL7/fbE2q5vnjxjmjJaliNblitmoTFpnT5soz12p0x8qVF7p1N1rFCFtGK00Z/A16mpyI+exH7T5MLr7+Hs9+ttpkabwIVqnjKkxYLc7df/+v+TuGp6qkXB1bGPtXFIlJ12AAACpUlEQVR4nO3cb1OiQBzA8XUX/8EJpiQmcmWaonhavf8Xd0t2zU15cjTMwK++n5p44oP9zu4COQNKAQAAAAAAAAAAAAAAAAAAAAAAAAAAAFBBrLQZGKNNFJnIHowKAl33qCqkdRA50+ng5uZmag9OpGcqDrK6h1Wl2WzeSZKft3eJdXeXdIz2M7Ote1gVMvPF6H55fbJcrhZBpDMT1z2s6uio0+31vTAM21borR8mjjFfqtDp7Nee2zpxw6uuLdTar3tc1dGOv+9t2q4bui23HaY/8kKlg7rHVR3tbO0qbbda7XwOQy8vVCr7EoWna55xOqdCu0Rtpi30B/qLXA//XagoFIJC+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiU712hm//kzwEH+VOyBfJ3MaiXY5N9KGy9POm8mwxUrArGHtgPBIHAQteu0l08MMoUTaIxyo/jhj/xfW4ObeFDNJ0OiuQfMabhU/jxTHOaw+5k6mRZdFlml6iZNT3xbGG7/zTqjkb71eiy1W6YNP7NEuf2oU30xuN0M07HF6Xpr/tj0vTXg5zbh66b/xY7tLyn46OUc+lk/7ZKS/Cuj4+ZkEL/odcP3XJs4dNzEsi4WkTJLp/DcrPouqktbPqp5q99uMn3YTnp0u5DU3NCgbdVul9v2u6hVN/hkK9SX8Y+jJLRuv+JObSFUu7atsP73lVp69Viq6OaEwqcCu3NV2dxtIZlPD8Pbzvzpt+1/aEj43xCpBv//+ErO86Xm+lyeZaUQLtYX5erzt8K+X9/hKR9H/O6B4CqFH0z8+67NgAAAAAAAAAAAAAAAAAAAAAAAAD4Ln4DSDNeY8KWhxkAAAAASUVORK5CYII=" 
+                alt="log in/profile"  
+                class="w-10 rounded-full">
+            </label>
+
+            <!-- content -->
+            <div class="fixed top-[Xpx] right-0 h-full w-64 bg-green-900 text-gray-100 shadow-md transform translate-x-full 
+            peer-checked:translate-x-0 transition-transform  duration-300 z-50 ">
+                Here Log In Form
+            </div>
+        
+            <!-- Footer if wanted 
+                <div class="p-4 border-t border-green-800 text-sm text-gray-400">
+                    <p> </p>
+                    <a> </a>
+                </div>-->
+        </div>
+    </div>
+</header>
+
+<body class="bg-green-100 text-green-900 p-4 space-y-6">
+
+  <!-- Category 1 -->
+  <div class="flex flex-col md:flex-row border-2 border-green-700 rounded-lg overflow-hidden bg-white">
+    <img src="https://cdn-icons-png.flaticon.com/512/7511/7511667.png" alt="Farm Shops & Markets"
+         class="w-full md:w-48 h-48 object-contain p-4 bg-green-50"/>
+    <div class="p-4 flex-1">
+      <h2 class="text-xl font-bold mb-2">Farm Shops & Markets</h2>
+      <p>Fresh and local produce directly from farms and markets in your area. Support sustainable agriculture and reduce your carbon footprint.</p>
+    </div>
+  </div>
+
+  <!-- Category 2 -->
+  <div class="flex flex-col md:flex-row-reverse border-2 border-green-700 rounded-lg overflow-hidden bg-white">
+    <img src="https://static.thenounproject.com/png/244919-200.png" alt="Sharing & Swaps"
+         class="w-full md:w-48 h-48 object-contain p-4 bg-green-50"/>
+    <div class="p-4 flex-1">
+      <h2 class="text-xl font-bold mb-2">Sharing & Swaps</h2>
+      <p>Connect with neighbors to share tools, equipment, and other resources. Swap items and reduce waste through community collaboration.</p>
+    </div>
+  </div>
+
+  <!-- Category 3 -->
+  <div class="flex flex-col md:flex-row border-2 border-green-700 rounded-lg overflow-hidden bg-white">
+    <img src="https://img.freepik.com/premium-vector/craftsman-cross-icon-design-perfect-craftsmanship-artisanal-brands_706143-4467.jpg"
+         alt="Handcraft Experts" class="w-full md:w-48 h-48 object-contain p-4 bg-green-50"/>
+    <div class="p-4 flex-1">
+      <h2 class="text-xl font-bold mb-2">Handcraft Experts</h2>
+      <p>Discover local artisans creating handmade goods with care and creativity. Support craftsmanship and traditional techniques.</p>
+    </div>
+  </div>
+
+  <!-- Category 4 -->
+  <div class="flex flex-col md:flex-row-reverse border-2 border-green-700 rounded-lg overflow-hidden bg-white">
+    <img src="https://cdn1.vectorstock.com/i/1000x1000/91/95/upcycled-icon-vector-47879195.jpg"
+         alt="Repairs & Upcycling" class="w-full md:w-48 h-48 object-contain p-4 bg-green-50"/>
+    <div class="p-4 flex-1">
+      <h2 class="text-xl font-bold mb-2">Repairs & Upcycling</h2>
+      <p>Give old items a second life. Find services and workshops that specialize in repairing, restoring, and upcycling everyday goods.</p>
+    </div>
+  </div>
+
+  <!-- Category 5 -->
+  <div class="flex flex-col md:flex-row border-2 border-green-700 rounded-lg overflow-hidden bg-white">
+    <img src="https://www.creativefabrica.com/wp-content/uploads/2021/06/04/Restaurant-icon-10-Graphics-12908030-1-1-580x386.jpg"
+         alt="Restaurants & Local Food" class="w-full md:w-48 h-48 object-contain p-4 bg-green-50"/>
+    <div class="p-4 flex-1">
+      <h2 class="text-xl font-bold mb-2">Restaurants & Local Food</h2>
+      <p>Eat healthy and local. Explore restaurants and cafes offering locally sourced ingredients and homemade recipes.</p>
+    </div>
+  </div>
+
+  <!-- Category 6 -->
+  <div class="flex flex-col md:flex-row-reverse border-2 border-green-700 rounded-lg overflow-hidden bg-white">
+    <img src="https://png.pngtree.com/png-vector/20230428/ourmid/pngtree-creative-workshop-line-icon-vector-png-image_6740078.png"
+         alt="Workshops & Classes" class="w-full md:w-48 h-48 object-contain p-4 bg-green-50"/>
+    <div class="p-4 flex-1">
+      <h2 class="text-xl font-bold mb-2">Workshops & Classes</h2>
+      <p>Learn new skills and connect with others. Join creative workshops and educational events in your neighborhood.</p>
+    </div>
+  </div>
+
+  <!-- Category 7 -->
+  <div class="flex flex-col md:flex-row border-2 border-green-700 rounded-lg overflow-hidden bg-white">
+    <img src="https://cdn-icons-png.flaticon.com/512/3058/3058072.png"
+         alt="Neighborhood Help" class="w-full md:w-48 h-48 object-contain p-4 bg-green-50"/>
+    <div class="p-4 flex-1">
+      <h2 class="text-xl font-bold mb-2">Neighborhood Help</h2>
+      <p>Need a hand? Offer or request assistance for errands, pet care, or small jobs within your community.</p>
+    </div>
+  </div>
+
+  <!-- Category 8 -->
+  <div class="flex flex-col md:flex-row-reverse border-2 border-green-700 rounded-lg overflow-hidden bg-white">
+    <img src="https://media.istockphoto.com/id/1304099238/de/vektor/car-sharing-vektor-symbol.jpg?s=612x612&w=0&k=20&c=gOdYMr0lsgCFnJCxKubUkvhY_rRIh4jrenOFScE6Fz0="
+         alt="Carsharing" class="w-full md:w-48 h-48 object-contain p-4 bg-green-50"/>
+    <div class="p-4 flex-1">
+      <h2 class="text-xl font-bold mb-2">Carsharing</h2>
+      <p>Share rides with others to reduce traffic, pollution, and costs. Connect with eco-conscious commuters in your area.</p>
+    </div>
+  </div>
+
+</body>
+</html>
