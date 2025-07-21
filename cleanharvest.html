@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmshops and Markets</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<header class="bg-green-600 text-green "> <!-- align next to each other-->
+
+    <div class="flex items-center justify-between gap-4 max-w-screen-xl mx-auto">
+        <!-- slidemenu left -->
+        <div class="relative left-3">
+            <!-- checks state -->
+            <input type="checkbox" id="menu-toggle" class="peer hidden">
+
+            <!-- menubutton -->
+            <label for="menu-toggle" class="p-4">
+                <!-- 3 horizontal stripes -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </label>
+
+            <!-- Menu Sidebar-->
+            <div class="fixed top-[Xpx] left-0 h-full w-64 bg-green-900 text-gray-100 shadow-md transform -translate-x-full 
+            peer-checked:translate-x-0 transition-transform  duration-300 z-50 ">
+                <div class="p-4">
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="block">Home</a></li>
+                        <li><a href="categories.html" class="block">Categories</a></li>
+                        <li><a href="#" class="block">Vendors</a></li>
+                        <li><a href="#" class="block">Blog</a></li>
+                        <li><a href="#" class="block">wasweißich</a></li>
+                        <li><a href="#" class="block">Settings</a></li>
+                    </ul>
+                </div>
+
+                <div class="p-4 border-t border-green-800 text-sm text-gray-400">
+                    <p>&copy; 2025 Flori and Toni learn Webdesign</p>
+                    <a href="#" class="hover:text-gray-200 block mt-2">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+
+    
+        <!-- locationsearchbar-->
+        <div class="relative w-full max-w-md mx-auto p-4">
+            <input
+            id="search-input"
+            type="text"
+            placeholder="Enter postal code or city"
+            class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600"
+            autocomplete="off"
+            />
+
+            <!-- Search icon -->
+            <svg
+                class="w-5 h-5 text-gray-400 absolute top-1/2 right-7 -translate-y-1/2 pointer-events-none"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24">
+
+                <circle cx="11" cy="11" r="7" stroke-linecap="round" stroke-linejoin="round" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <!-- Suggestion list: Autocomplete
+            <ul id="suggestions" class="absolute left-0 right-0 mt-1 bg-white border border-gray-300 rounded-md shadow-lg z-10 hidden">
+            Suggestions will be injected here 
+            </ul>-->
+        </div>
+        
+            
+        <div class="relative "> <!-- here add rightbound and link to other sidebar -->
+            <!-- checks state -->
+            <input type="checkbox" id="right-menu-toggle" class="peer hidden">
+
+            <!-- menubutton -->
+            <label for="right-menu-toggle" class="p-4">
+                <img src="" 
+                alt="log in/profile"  
+                class="w-8 h-8">
+            </label>
+
+            <!-- content -->
+            <div class="fixed top-[Xpx] left-0 h-full w-64 bg-green-900 text-gray-100 shadow-md transform -translate-x-full 
+            peer-checked:translate-x-0 transition-transform  duration-300 z-50 ">
+                Here Log In Form
+            </div>
+        
+            <!-- Footer if wanted -->
+                <div class="p-4 border-t border-green-800 text-sm text-gray-400">
+                    <p> </p>
+                    <a> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body class="bg-green-50 text-gray-800 font-sans">
+
+    <!-- Header with headline and image side by side -->
+    <header class="flex items-center justify-between bg-green-100 p-6 border-b-2 border-green-700 max-w-4xl mx-auto">
+      <h1 class="text-3xl font-bold text-green-900">Green Harvest Co-op</h1>
+      <img src="https://cdn-icons-png.flaticon.com/512/2909/2909761.png"
+           alt="Clean Harvest Logo"
+           class="w-20 h-20 object-contain" />
+    </header>
+  
+    <!-- Main content -->
+    <main class="max-w-4xl mx-auto p-6 space-y-6">
+  
+      <!-- Introduction -->
+      <p class="text-lg">
+        Green Harvest Co-op is your friendly neighborhood marketplace for fresh, organic, and locally grown produce.
+        With a commitment to sustainability and community support, we bring you the best from regional farmers.
+      </p>
+  
+      <!-- Products -->
+      <section>
+        <h2 class="text-xl font-semibold text-green-800 mb-2">What We Offer:</h2>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Organic vegetables</li>
+          <li>Free-range eggs</li>
+          <li>Locally grown herbs</li>
+          <li>Homemade jams and preserves</li>
+          <li>Farm-fresh dairy products</li>
+        </ul>
+      </section>
+
+    <!-- Hashtags -->
+      <section class="bg-green-100">
+        <div class="flex flex-wrap gap-3">
+          <a href="#" class="px-3 py-1 bg-green-300 text-green-900 rounded hover:bg-green-400 transition">Organic</a>
+          <a href="#" class="px-3 py-1 bg-green-300 text-green-900 rounded hover:bg-green-400 transition">Farmers Market</a>
+          <a href="#" class="px-3 py-1 bg-green-300 text-green-900 rounded hover:bg-green-400 transition">Local Produce</a>
+          <a href="#" class="px-3 py-1 bg-green-300 text-green-900 rounded hover:bg-green-400 transition">Honey</a>
+          <a href="#" class="px-3 py-1 bg-green-300 text-green-900 rounded hover:bg-green-400 transition">Dairy</a>
+          <a href="#" class="px-3 py-1 bg-green-300 text-green-900 rounded hover:bg-green-400 transition">Bakery</a>
+        </div>
+      </section>
+
+
+      <!-- Address and Opening Hours -->
+      <section class="flex flex-col sm:flex-row sm:items-center sm:justify-between border-t pt-4 border-green-300">
+        <div class="mb-4 sm:mb-0">
+          <h3 class="font-semibold text-green-800">Address:</h3>
+          <a href="https://maps.google.com/?q=123 Greenfield Lane, Townsville" target="_blank" class="text-blue-600 underline">
+            123 Greenfield Lane, Townsville
+          </a>
+        </div>
+        <div>
+          <h3 class="font-semibold text-green-800">Opening Hours:</h3>
+          <p>Mon–Fri: 8:00 AM – 6:00 PM</p>
+          <p>Sat: 9:00 AM – 4:00 PM</p>
+          <p>Sun: Closed</p>
+        </div>
+      </section>
+  
+    </main>
+  
+  </body>
+  </html>

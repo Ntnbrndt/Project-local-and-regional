@@ -4,9 +4,32 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Start</title>
+     <style>
+        .scrollbar-hide {
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none;  /* IE/Edge */
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none; /* Chrome, Safari, Opera */
+        }
+      </style>      
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<header class="bg-green-600 text-green "> <!-- align next to each other-->
+
+<!-- colors: {
+        'midnight-green': '#073b3a',
+        'dartmouth-green': '#0b6E4F',
+        'pigment-green': '#08A045',
+        'mantis': '#6BBF59',
+        'ecru': '#DDB771',
+        'murtle-green': '#32746D',
+        'dark-green': '#01200F',
+        'midnight2': '#104F55',
+        'cambridge-blue': '#9EC5AB',
+      },
+-->
+
+<header class="bg-[#073b3a] text-[#DDB771] ">
 
     <div class="flex items-center justify-between gap-4 max-w-screen-xl mx-auto">
         <!-- slidemenu left -->
@@ -15,7 +38,7 @@
             <input type="checkbox" id="menu-toggle" class="peer hidden">
 
             <!-- menubutton -->
-            <label for="menu-toggle" class="p-4">
+            <label for="menu-toggle" class="p-4 text-[#9EC5AB]">
                 <!-- 3 horizontal stripes -->
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -27,30 +50,29 @@
             peer-checked:translate-x-0 transition-transform  duration-300 z-50 ">
                 <div class="p-4">
                     <ul class="space-y-4">
-                        <li><a href="#" class="block">Home</a></li>
-                        <li><a href="#" class="block">Categories</a></li>
-                        <li><a href="#" class="block">Vendors</a></li>
-                        <li><a href="#" class="block">Blog</a></li>
-                        <li><a href="#" class="block">wasweißich</a></li>
-                        <li><a href="#" class="block">Settings</a></li>
+                        <li><a href="index.html" class="block text-[#DDB771]">Home</a></li>
+                        <li><a href="categories.html" class="block text-[#DDB771]">Categories</a></li>
+                        <li><a href="#" class="block text-[#DDB771]">Vendors</a></li>
+                        <li><a href="#" class="block text-[#DDB771]">Blog</a></li>
+                        <li><a href="#" class="block text-[#DDB771]">Settings</a></li>
                     </ul>
                 </div>
 
-                <div class="p-4 border-t border-green-800 text-sm text-gray-400">
+                <div class="p-4 border-t border-[#9EC5AB] text-sm text-[#9EC5AB]">
                     <p>&copy; 2025 Flori and Toni learn Webdesign</p>
-                    <a href="#" class="hover:text-gray-200 block mt-2">Privacy Policy</a>
+                    <a href="#" class="hover:text-green-200 block mt-2">Privacy Policy</a>
                 </div>
             </div>
         </div>
 
     
         <!-- locationsearchbar-->
-        <div class="relative w-full max-w-md mx-auto p-4">
+        <div class="relative w-full max-w-md mx-auto p-4 text-[#DDB771]">
             <input
             id="search-input"
             type="text"
             placeholder="Enter postal code or city"
-            class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600"
+            class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#073b3a] placeholder-[#DDB771]"
             autocomplete="off"
             />
 
@@ -73,134 +95,182 @@
         </div>
         
             
-        <div class="relative "> <!-- here add rightbound and link to other sidebar -->
+        <div class="relative right-3">
             <!-- checks state -->
             <input type="checkbox" id="right-menu-toggle" class="peer hidden">
 
-            <!-- menubutton -->
-            <label for="right-menu-toggle" class="p-4">
-                <img src="" 
+            <!-- login button -->
+            <label for="right-menu-toggle" >
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAmVBMVEVonzn///9onzdlnjRhmi77/Plxo0Sgw4PN373o8OP///3v9OvV5MhfmyttoT1qnjmQum/d69KlxYjp9eL7/fbE2q5vnjxjmjJaliNblitmoTFpnT5soz12p0x8qVF7p1N1rFCFtGK00Z/A16mpyI+exH7T5MLr7+Hs9+ttpkabwIVqnjKkxYLc7df/+v+TuGp6qkXB1bGPtXFIlJ12AAACpUlEQVR4nO3cb1OiQBzA8XUX/8EJpiQmcmWaonhavf8Xd0t2zU15cjTMwK++n5p44oP9zu4COQNKAQAAAAAAAAAAAAAAAAAAAAAAAAAAAFBBrLQZGKNNFJnIHowKAl33qCqkdRA50+ng5uZmag9OpGcqDrK6h1Wl2WzeSZKft3eJdXeXdIz2M7Ote1gVMvPF6H55fbJcrhZBpDMT1z2s6uio0+31vTAM21borR8mjjFfqtDp7Nee2zpxw6uuLdTar3tc1dGOv+9t2q4bui23HaY/8kKlg7rHVR3tbO0qbbda7XwOQy8vVCr7EoWna55xOqdCu0Rtpi30B/qLXA//XagoFIJC+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiU712hm//kzwEH+VOyBfJ3MaiXY5N9KGy9POm8mwxUrArGHtgPBIHAQteu0l08MMoUTaIxyo/jhj/xfW4ObeFDNJ0OiuQfMabhU/jxTHOaw+5k6mRZdFlml6iZNT3xbGG7/zTqjkb71eiy1W6YNP7NEuf2oU30xuN0M07HF6Xpr/tj0vTXg5zbh66b/xY7tLyn46OUc+lk/7ZKS/Cuj4+ZkEL/odcP3XJs4dNzEsi4WkTJLp/DcrPouqktbPqp5q99uMn3YTnp0u5DU3NCgbdVul9v2u6hVN/hkK9SX8Y+jJLRuv+JObSFUu7atsP73lVp69Viq6OaEwqcCu3NV2dxtIZlPD8Pbzvzpt+1/aEj43xCpBv//+ErO86Xm+lyeZaUQLtYX5erzt8K+X9/hKR9H/O6B4CqFH0z8+67NgAAAAAAAAAAAAAAAAAAAAAAAAD4Ln4DSDNeY8KWhxkAAAAASUVORK5CYII=" 
                 alt="log in/profile"  
-                class="w-8 h-8">
+                class="w-10 rounded-full border-2 border-[#9EC5AB]">
             </label>
 
             <!-- content -->
-            <div class="fixed top-[Xpx] left-0 h-full w-64 bg-green-900 text-gray-100 shadow-md transform -translate-x-full 
+            <div class="fixed top-[Xpx] right-0 h-full w-64 bg-green-900 text-gray-100 shadow-md transform translate-x-full 
             peer-checked:translate-x-0 transition-transform  duration-300 z-50 ">
-                Here Log In Form
+            <section class="pt-16 pb-16">
+				<form
+					class="p-4 flex flex-col justify-center items-center text-center  text-[#DDB771]"
+				>
+					<label for="name">Enter your name here:</label>
+					<input
+						type="text"
+						id="name"
+						name="name"
+						required
+						class="bg-slate-50 m-4 border-1"
+					/>
+					<label for="email">Enter your E-Mail here:</label>
+					<input
+						type="text"
+						id="email"
+						name="email"
+						required
+						class="bg-green-200 m-4 border-1"
+					/>
+					<button
+						type="submit"
+						class="text-[#DDB771] bg-[#073b3a] w-fit pl-8 pr-8 pt-2 pb-2"
+					>
+						Register now!
+					</button>
+				</form>
+			</section>
             </div>
         
-            <!-- Footer if wanted -->
+            <!-- Footer if wanted 
                 <div class="p-4 border-t border-green-800 text-sm text-gray-400">
                     <p> </p>
                     <a> </a>
-                </div>
-            </div>
+                </div>-->
         </div>
     </div>
 </header>
 
-<body>
+<body class="bg-[#6BBF59]">
 
-    <section class="relative py-4 px-2 max-w-full overflow-hidden">
+    <section class="relative py-4 px-2 max-w-full text-green overflow-hidden">
         <div id="carousel" class="flex items-start space-x-6 overflow-x-auto scrollbar-hide scroll-smooth">
           
-            <!-- categorys -->
-          <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
-            <a href="link-to-category-list">
-              <img src="https://cdn-icons-png.flaticon.com/512/7511/7511667.png "
-                alt="Farm Shops & Markets"
-                class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto" /> <!-- greyscale -->
-            </a>
-            <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
-              Farm Shops & Markets
-            </figcaption>
-          </figure>
-      
-          <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
-            <a href="link-to-category-list">
-              <img src="https://static.thenounproject.com/png/244919-200.png" 
-                alt="Sharing & Swaps"
-                class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto" />
-            </a>
-            <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
-              Sharing & Swaps
-            </figcaption>
-          </figure>
-      
-          <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
-            <a href="link-to-category-list">
-              <img src="https://img.freepik.com/premium-vector/craftsman-cross-icon-design-perfect-craftsmanship-artisanal-brands_706143-4467.jpg" 
-                alt="Craftsmen"
-                class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto" />
-            </a>
-            <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
-              Handcrafts experts
-            </figcaption>
-          </figure>
-      
-          <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
-            <a href="link-to-category-list">
-              <img src="https://cdn1.vectorstock.com/i/1000x1000/91/95/upcycled-icon-vector-47879195.jpg" 
-                alt="Repairs & Upcycling"
-                class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto" />
-            </a>
-            <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
-              Repairs & Upcycling
-            </figcaption>
-          </figure>
-            
-          <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
-            <a href="link-to-category-list">
-              <img src="https://www.creativefabrica.com/wp-content/uploads/2021/06/04/Restaurant-icon-10-Graphics-12908030-1-1-580x386.jpg" 
-                alt="Gardening"
-                class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto" />
-            </a>
-            <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
-              Restaurants & Local Food
-            </figcaption>
-          </figure>
-      
-          <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
-            <a href="link-to-category-list">
-              <img src="https://png.pngtree.com/png-vector/20230428/ourmid/pngtree-creative-workshop-line-icon-vector-png-image_6740078.png" 
-                alt="Workshops & Classes"
-                class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto" />
-            </a>
-            <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
-              Workshops & Classes
-            </figcaption>
-          </figure>
-
-          <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
-            <a href="link-to-category-list">
-              <img src="https://cdn-icons-png.flaticon.com/512/3058/3058072.png" 
-                alt="Neighborhood help"
-                class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto" />
-            </a>
-            <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
-              Neighboorhood Help
-            </figcaption>
-          </figure>
-
-          <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
-            <a href="link-to-category-list">
-              <img src="https://media.istockphoto.com/id/1304099238/de/vektor/car-sharing-vektor-symbol.jpg?s=612x612&w=0&k=20&c=gOdYMr0lsgCFnJCxKubUkvhY_rRIh4jrenOFScE6Fz0=" 
-                alt="Carsharing"
-                class="w-16 h-16 rounded-full bg-gray-100 object-cover mx-auto" />
-            </a>
-            <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
-              Carsharing & Mobility
-            </figcaption>
-          </figure>
-
-        </div>
+            <!-- Category: Farm Shops & Markets -->
+      <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
+        <a href="Farmshops.html">
+          <div class="w-16 h-16 rounded-full bg-gray-100 border-2 border-green-900 flex items-center justify-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/7511/7511667.png"
+              alt="Farm Shops & Markets"
+              class="w-11 h-11 object-contain grayscale" />
+          </div>
+        </a>
+        <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
+          Farm Shops & Markets
+        </figcaption>
+      </figure>
+  
+      <!-- Category: Sharing & Swaps -->
+      <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
+        <a href="link-to-category-list">
+          <div class="w-16 h-16 rounded-full bg-gray-100 border-2 border-green-900 flex items-center justify-center">
+            <img src="https://static.thenounproject.com/png/244919-200.png"
+              alt="Sharing & Swaps"
+              class="w-11 h-11 object-contain grayscale" />
+          </div>
+        </a>
+        <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
+          Sharing & Swaps
+        </figcaption>
+      </figure>
+  
+      <!-- Category: Handcrafts experts -->
+      <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
+        <a href="link-to-category-list">
+          <div class="w-16 h-16 rounded-full bg-gray-100 border-2 border-green-900 flex items-center justify-center">
+            <img src="https://img.freepik.com/premium-vector/craftsman-cross-icon-design-perfect-craftsmanship-artisanal-brands_706143-4467.jpg"
+              alt="Craftsmen"
+              class="w-11 h-11 object-contain grayscale" />
+          </div>
+        </a>
+        <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
+          Handcrafts experts
+        </figcaption>
+      </figure>
+  
+      <!-- Category: Repairs & Upcycling -->
+      <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
+        <a href="link-to-category-list">
+          <div class="w-16 h-16 rounded-full bg-gray-100 border-2 border-green-900 flex items-center justify-center">
+            <img src="https://cdn1.vectorstock.com/i/1000x1000/91/95/upcycled-icon-vector-47879195.jpg"
+              alt="Repairs & Upcycling"
+              class="w-11 h-11 object-contain grayscale" />
+          </div>
+        </a>
+        <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
+          Repairs & Upcycling
+        </figcaption>
+      </figure>
+  
+      <!-- Category: Restaurants & Local Food -->
+      <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
+        <a href="link-to-category-list">
+          <div class="w-16 h-16 rounded-full bg-gray-100 border-2 border-green-900 flex items-center justify-center">
+            <img src="https://www.creativefabrica.com/wp-content/uploads/2021/06/04/Restaurant-icon-10-Graphics-12908030-1-1-580x386.jpg"
+              alt="Restaurants & Local Food"
+              class="w-11 h-11 object-contain grayscale" />
+          </div>
+        </a>
+        <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
+          Restaurants & Local Food
+        </figcaption>
+      </figure>
+  
+      <!-- Category: Workshops & Classes -->
+      <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
+        <a href="link-to-category-list">
+          <div class="w-16 h-16 rounded-full bg-gray-100 border-2 border-green-900 flex items-center justify-center">
+            <img src="https://png.pngtree.com/png-vector/20230428/ourmid/pngtree-creative-workshop-line-icon-vector-png-image_6740078.png"
+              alt="Workshops & Classes"
+              class="w-11 h-11 object-contain grayscale" />
+          </div>
+        </a>
+        <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
+          Workshops & Classes
+        </figcaption>
+      </figure>
+  
+      <!-- Category: Neighborhood Help -->
+      <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
+        <a href="link-to-category-list">
+          <div class="w-16 h-16 rounded-full bg-gray-100 border-2 border-green-900 flex items-center justify-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/3058/3058072.png"
+              alt="Neighborhood Help"
+              class="w-11 h-11 object-contain grayscale" />
+          </div>
+        </a>
+        <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
+          Neighboorhood Help
+        </figcaption>
+      </figure>
+  
+      <!-- Category: Carsharing & Mobility -->
+      <figure class="flex-shrink-0 flex flex-col items-center w-20 min-w-[80px] text-center">
+        <a href="link-to-category-list">
+          <div class="w-16 h-16 rounded-full bg-gray-100 border-2 border-green-900 flex items-center justify-center">
+            <img src="https://media.istockphoto.com/id/1304099238/de/vektor/car-sharing-vektor-symbol.jpg?s=612x612&w=0&k=20&c=gOdYMr0lsgCFnJCxKubUkvhY_rRIh4jrenOFScE6Fz0="
+              alt="Carsharing"
+              class="w-11 h-11 object-contain grayscale" />
+          </div>
+        </a>
+        <figcaption class="mt-2 text-sm leading-tight break-words max-h-[3rem] overflow-hidden">
+          Carsharing & Mobility
+        </figcaption>
+      </figure>
+    </div>
       
         <!-- Scroll button -->
         <button
           id="scrollNext"
           aria-label="Scroll categories right"
-          class="absolute top-0 right-0 h-full w-10 bg-green-200 flex items-center justify-center cursor-pointer select-none hover:bg-green-300"
+          class="absolute top-0 right-0 h-full w-5 bg-green-300 flex items-center justify-center cursor-pointer select-none"
         >
           <span class="text-xl text-green-800">&#9654;</span>
         </button>
@@ -221,60 +291,116 @@
       </script>
 
 
-    <!-- Searchbar  -->
-    <section class=""> <!-- class: lower line  -->
-        <div class="relative w-full max-w-md mx-auto p-4">
-            <input
-              id="search-input"
-              type="text"
-              placeholder="search"
-              class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600"
-              autocomplete="off"
-            />
-    
-            <!-- Search icon -->
-            <label for="enter" class="p-4">
-            <svg
-                class="w-5 h-5 text-gray-400 absolute top-1/2 right-7 -translate-y-1/2 pointer-events-none"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24">
-    
-                <circle cx="11" cy="11" r="7" stroke-linecap="round" stroke-linejoin="round" />
-                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            </label>
-        </div>
-    </section>
-
-    <!-- Blogposts Preview -->
-
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
-        <div class="bg-white shadow-md rounded-xl p-6">
-            <h2 class="text-xl font-semibold mb-2">Blogpost 1 Title</h2>
-            <p class="text-gray-700">This is the first paragraph of the first blog post. It gives a short preview of the content.</p>
-        </div>
-
-        <div class="bg-white shadow-md rounded-xl p-6">
-            <h2 class="text-xl font-semibold mb-2">Blogpost 2 Title</h2>
-            <p class="text-gray-700">This is the first paragraph of the second blog post. It offers a teaser of what the blog covers.</p>
-        </div>
-    </section>
+    <!-- Searchbar -->
+<section class="bg-[#6BBF59] py-4 border-t border-b border-green-500">
+    <div class="relative w-full max-w-md mx-auto px-4">
+      <input
+        id="search-input"
+        type="text"
+        placeholder="What are you Looking for?"
+        class="w-full py-4 pl-4 pr-10 border-2 border-green-500 rounded-md shadow-sm bg-green-200 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-600"
+        autocomplete="off"
+      />
   
+      <!-- Search icon -->
+      <svg
+        class="w-5 h-5 text-green-700 absolute top-1/2 right-6 transform -translate-y-1/2 pointer-events-none"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+      >
+        <circle cx="11" cy="11" r="7" stroke-linecap="round" stroke-linejoin="round" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- Blogpost Preview -->
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 bg-[#6BBF59]"> 
+
+    <a href="link-to-blogpost-1" 
+    class="block border-2 border-green-400 rounded-xl p-6 bg-green-200 shadow-md hover:shadow-lg transition-shadow duration-200">
+        <h2 class="text-2xl font-semibold mb-3">Blogpost 1 Title</h2>
+        <p class="text-gray-700 text-base leading-relaxed">
+            This is the first paragraph of the first blog post. It gives a short preview of the content.
+        </p>
+    </a>
+  
+    <a href="link-to-blogpost-2" 
+    class="block border-2 border-green-400 rounded-xl p-6 bg-green-200 shadow-md hover:shadow-lg transition-shadow duration-200">
+        <h2 class="text-2xl font-semibold mb-3">Blogpost 2 Title</h2>
+        <p class="text-gray-700 text-base leading-relaxed">
+            This is the first paragraph of the second blog post. It offers a teaser of what the blog covers.
+        </p>
+    </a>
+  
+  </section>
     <!-- Map  -->
     <section class="p-5">
         <iframe 
           title="Map" 
           src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik"
-          class="w-full h-[300px] border-0"
+          class="w-full h-[300px] border-3 border-green-900"
           allowfullscreen
           loading="lazy"
         ></iframe>
-      </section>
+    </section>
       
-    <footer>
-        Done by Florian: Impressum Insta etc
+    <footer
+        class="flex flex-col items-center p-8 pb-12 bg-[#073b3a] w-[100%] text-slate-50"
+		>
+			<h2 class="pb-8">Contact Us</h2>
+			<!-- Section for contact information -->
+			<section class="mb-8">
+				<span class="text-xl font-bold">Adress Information</span>
+				<!-- use an unordered list -->
+				<ul class="list-none mt-4">
+					<!-- nest span inside list element for styling -->
+					<li>
+						<span class="font-bold">Owner:</span> Some Random Person
+					</li>
+					<li>
+						<span class="font-bold">Street:</span> Somewhere in
+						nowhere
+					</li>
+					<li>
+						<span class="font-bold">City:</span> Sme random town
+					</li>
+				</ul>
+			</section>
+
+			<!-- Section for links and nested images -->
+			<section class="flex flex-row size-[100%] justify-around">
+				<a href="https://www.instagram.com/">
+					<img
+						src="https://static.cdninstagram.com/rsrc.php/v4/yI/r/VsNE-OHk_8a.png"
+						alt="Instagram"
+						class="w-10 h-10"
+					/>
+				</a>
+				<a href="https://www.facebook.de">
+					<img
+						src="https://www.facebook.com/images/fb_icon_325x325.png"
+						alt="Facebook"
+						class="w-10 h-10"
+					/>
+				</a>
+				<a href="https://www.youtube.com">
+					<img
+						src="https://www.youtube.com/s/desktop/2253fa3d/img/logos/favicon.ico"
+						alt="Youtube"
+						class="w-10 h-10"
+					/>
+				</a>
+				<a href="https://www.linkedin.com">
+					<img
+						src="https://static.licdn.com/aero-v1/sc/h/5bukxbhy9xsil5mb7c2wulfbx"
+						alt="linkedIn"
+						class="w-10 h-10"
+					/>
+				</a>
+			</section>
     </footer>
 </body>
 </html>
