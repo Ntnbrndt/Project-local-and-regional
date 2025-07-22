@@ -1,260 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmshops and Markets</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Farmshops and Markets</title>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	</head>
 
-<header class="bg-[#073b3a] text-[#DDB771] ">
+	<header class="bg-[#073b3a] text-[#DDB771]">
+		<div
+			class="flex items-center justify-between gap-4 max-w-screen-xl mx-auto"
+		>
+			<!-- slidemenu left -->
+			<div class="relative left-3">
+				<!-- checks state -->
+				<input type="checkbox" id="menu-toggle" class="peer hidden" />
 
-  <div
-    class="flex items-center justify-between gap-4 max-w-screen-xl mx-auto"
-  >
-    <!-- slidemenu left -->
-    <div class="relative left-3">
-      <!-- checks state -->
-      <input type="checkbox" id="menu-toggle" class="peer hidden" />
+				<!-- menubutton -->
+				<label for="menu-toggle" class="p-4 text-[#9EC5AB]">
+					<!-- 3 horizontal stripes -->
+					<svg
+						class="w-6 h-6"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						viewBox="0 0 24 24"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M4 6h16M4 12h16M4 18h16"
+						/>
+					</svg>
+				</label>
 
-          <!-- menubutton -->
-          <label for="menu-toggle" class="p-4 text-[#9EC5AB]">
-              <!-- 3 horizontal stripes -->
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-          </label>
+				<!-- Menu Sidebar-->
+				<div
+					class="fixed top-20 left-0 h-1/2 w-64 bg-[#073b3a] text-gray-100 shadow-md transform -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 z-50"
+				>
+					<div class="p-4">
+						<ul class="space-y-4">
+							<li>
+								<a
+									href="../index.html"
+									class="block text-[#DDB771]"
+									>Home</a
+								>
+							</li>
+							<li>
+								<a
+									href="../categories.html"
+									class="block text-[#DDB771]"
+									>Categories</a
+								>
+							</li>
+							<li>
+								<a href="#" class="block text-[#DDB771]"
+									>Vendors</a
+								>
+							</li>
+							<li>
+								<a
+									href="src/blog.html"
+									class="block text-[#DDB771]"
+									>Blog</a
+								>
+							</li>
+							<li>
+								<a href="#" class="block text-[#DDB771]"
+									>Settings</a
+								>
+							</li>
+						</ul>
+					</div>
 
-          <!-- Menu Sidebar-->
-          <div class="fixed top-20 left-0 h-1/2 w-64 bg-[#073b3a] text-gray-100 shadow-md transform -translate-x-full 
-          peer-checked:translate-x-0 transition-transform  duration-300 z-50 ">
-              <div class="p-4">
-                  <ul class="space-y-4">
-                      <li><a href="index.html" class="block text-[#DDB771]">Home</a></li>
-                      <li><a href="categories.html" class="block text-[#DDB771]">Categories</a></li>
-                      <li><a href="#" class="block text-[#DDB771]">Vendors</a></li>
-                      <li><a href="#" class="block text-[#DDB771]">Blog</a></li>
-                      <li><a href="#" class="block text-[#DDB771]">Settings</a></li>
-                  </ul>
-              </div>
+					<div
+						class="p-4 border-t border-[#9EC5AB] text-sm text-[#9EC5AB]"
+					>
+						<p>&copy; 2025 Flori and Toni learn Webdesign</p>
+						<a href="#" class="hover:text-green-200 block mt-2"
+							>Privacy Policy</a
+						>
+					</div>
+				</div>
+			</div>
 
-              <div class="p-4 border-t border-[#9EC5AB] text-sm text-[#9EC5AB]">
-                  <p>&copy; 2025 Flori and Toni learn Webdesign</p>
-                  <a href="#" class="hover:text-green-200 block mt-2">Privacy Policy</a>
-              </div>
-          </div>
-      </div>
+			<!-- locationsearchbar-->
+			<div class="relative w-full max-w-md mx-auto p-4 text-[#DDB771]">
+				<input
+					id="search-input"
+					type="text"
+					placeholder="Enter postal code or city"
+					class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#073b3a] placeholder-[#DDB771]"
+					autocomplete="off"
+				/>
 
-  
-      <!-- locationsearchbar-->
-      <div class="relative w-full max-w-md mx-auto p-4 text-[#DDB771]">
-          <input
-          id="search-input"
-          type="text"
-          placeholder="Enter postal code or city"
-          class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#073b3a] placeholder-[#DDB771]"
-          autocomplete="off"
-          />
+				<!-- Search icon -->
+				<svg
+					class="w-5 h-5 text-gray-400 absolute top-1/2 right-7 -translate-y-1/2 pointer-events-none"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					viewBox="0 0 24 24"
+				>
+					<circle
+						cx="11"
+						cy="11"
+						r="7"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+					<line
+						x1="21"
+						y1="21"
+						x2="16.65"
+						y2="16.65"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+				</svg>
 
+				<!-- Suggestion list: Autocomplete
+            <ul id="suggestions" class="absolute left-0 right-0 mt-1 bg-white border border-gray-300 rounded-md shadow-lg z-10 hidden">
+            Suggestions will be injected here 
+            </ul>-->
+			</div>
 
-      <!-- Search icon -->
-      <svg
-        class="w-5 h-5 text-gray-400 absolute top-1/2 right-7 -translate-y-1/2 pointer-events-none"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-      >
-        <circle
-          cx="11"
-          cy="11"
-          r="7"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <line
-          x1="21"
-          y1="21"
-          x2="16.65"
-          y2="16.65"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
+			<div class="relative right-3">
+				<!-- checks state -->
+				<input
+					type="checkbox"
+					id="right-menu-toggle"
+					class="peer hidden"
+				/>
 
-      <!-- Suggestion list: Autocomplete
-          <ul id="suggestions" class="absolute left-0 right-0 mt-1 bg-white border border-gray-300 rounded-md shadow-lg z-10 hidden">
-          Suggestions will be injected here 
-          </ul>-->
-        
-      </div>
-      
-          
-      <div class="relative right-3">
-          <!-- checks state -->
-          <input type="checkbox" id="right-menu-toggle" class="peer hidden">
+				<!-- login button -->
+				<label for="right-menu-toggle">
+					<img
+						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAmVBMVEVonzn///9onzdlnjRhmi77/Plxo0Sgw4PN373o8OP///3v9OvV5MhfmyttoT1qnjmQum/d69KlxYjp9eL7/fbE2q5vnjxjmjJaliNblitmoTFpnT5soz12p0x8qVF7p1N1rFCFtGK00Z/A16mpyI+exH7T5MLr7+Hs9+ttpkabwIVqnjKkxYLc7df/+v+TuGp6qkXB1bGPtXFIlJ12AAACpUlEQVR4nO3cb1OiQBzA8XUX/8EJpiQmcmWaonhavf8Xd0t2zU15cjTMwK++n5p44oP9zu4COQNKAQAAAAAAAAAAAAAAAAAAAAAAAAAAAFBBrLQZGKNNFJnIHowKAl33qCqkdRA50+ng5uZmag9OpGcqDrK6h1Wl2WzeSZKft3eJdXeXdIz2M7Ote1gVMvPF6H55fbJcrhZBpDMT1z2s6uio0+31vTAM21borR8mjjFfqtDp7Nee2zpxw6uuLdTar3tc1dGOv+9t2q4bui23HaY/8kKlg7rHVR3tbO0qbbda7XwOQy8vVCr7EoWna55xOqdCu0Rtpi30B/qLXA//XagoFIJC+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiU712hm//kzwEH+VOyBfJ3MaiXY5N9KGy9POm8mwxUrArGHtgPBIHAQteu0l08MMoUTaIxyo/jhj/xfW4ObeFDNJ0OiuQfMabhU/jxTHOaw+5k6mRZdFlml6iZNT3xbGG7/zTqjkb71eiy1W6YNP7NEuf2oU30xuN0M07HF6Xpr/tj0vTXg5zbh66b/xY7tLyn46OUc+lk/7ZKS/Cuj4+ZkEL/odcP3XJs4dNzEsi4WkTJLp/DcrPouqktbPqp5q99uMn3YTnp0u5DU3NCgbdVul9v2u6hVN/hkK9SX8Y+jJLRuv+JObSFUu7atsP73lVp69Viq6OaEwqcCu3NV2dxtIZlPD8Pbzvzpt+1/aEj43xCpBv//+ErO86Xm+lyeZaUQLtYX5erzt8K+X9/hKR9H/O6B4CqFH0z8+67NgAAAAAAAAAAAAAAAAAAAAAAAAD4Ln4DSDNeY8KWhxkAAAAASUVORK5CYII="
+						alt="log in/profile"
+						class="w-10 rounded-full border-2 border-[#9EC5AB]"
+					/>
+				</label>
 
-          <!-- login button -->
-          <label for="right-menu-toggle" >
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAmVBMVEVonzn///9onzdlnjRhmi77/Plxo0Sgw4PN373o8OP///3v9OvV5MhfmyttoT1qnjmQum/d69KlxYjp9eL7/fbE2q5vnjxjmjJaliNblitmoTFpnT5soz12p0x8qVF7p1N1rFCFtGK00Z/A16mpyI+exH7T5MLr7+Hs9+ttpkabwIVqnjKkxYLc7df/+v+TuGp6qkXB1bGPtXFIlJ12AAACpUlEQVR4nO3cb1OiQBzA8XUX/8EJpiQmcmWaonhavf8Xd0t2zU15cjTMwK++n5p44oP9zu4COQNKAQAAAAAAAAAAAAAAAAAAAAAAAAAAAFBBrLQZGKNNFJnIHowKAl33qCqkdRA50+ng5uZmag9OpGcqDrK6h1Wl2WzeSZKft3eJdXeXdIz2M7Ote1gVMvPF6H55fbJcrhZBpDMT1z2s6uio0+31vTAM21borR8mjjFfqtDp7Nee2zpxw6uuLdTar3tc1dGOv+9t2q4bui23HaY/8kKlg7rHVR3tbO0qbbda7XwOQy8vVCr7EoWna55xOqdCu0Rtpi30B/qLXA//XagoFIJC+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiU712hm//kzwEH+VOyBfJ3MaiXY5N9KGy9POm8mwxUrArGHtgPBIHAQteu0l08MMoUTaIxyo/jhj/xfW4ObeFDNJ0OiuQfMabhU/jxTHOaw+5k6mRZdFlml6iZNT3xbGG7/zTqjkb71eiy1W6YNP7NEuf2oU30xuN0M07HF6Xpr/tj0vTXg5zbh66b/xY7tLyn46OUc+lk/7ZKS/Cuj4+ZkEL/odcP3XJs4dNzEsi4WkTJLp/DcrPouqktbPqp5q99uMn3YTnp0u5DU3NCgbdVul9v2u6hVN/hkK9SX8Y+jJLRuv+JObSFUu7atsP73lVp69Viq6OaEwqcCu3NV2dxtIZlPD8Pbzvzpt+1/aEj43xCpBv//+ErO86Xm+lyeZaUQLtYX5erzt8K+X9/hKR9H/O6B4CqFH0z8+67NgAAAAAAAAAAAAAAAAAAAAAAAAD4Ln4DSDNeY8KWhxkAAAAASUVORK5CYII=" 
-              alt="log in/profile"  
-              class="w-10 rounded-full border-2 border-[#9EC5AB]">
-          </label>
+				<!-- content -->
+				<div
+					class="fixed top-20 right-0 h-1/2 w-64 bg-[#073b3a] text-gray-100 shadow-md transform translate-x-full peer-checked:translate-x-0 transition-transform duration-300 z-50"
+				>
+					<section class="pt-16 pb-16">
+						<form
+							class="p-4 flex flex-col justify-center items-center text-center text-[#DDB771]"
+						>
+							<label for="name">Enter your name here:</label>
+							<input
+								type="text"
+								id="name"
+								name="name"
+								required
+								class="bg-green-200 m-4 border-1"
+							/>
+							<label for="email">Enter your E-Mail here:</label>
+							<input
+								type="text"
+								id="email"
+								name="email"
+								required
+								class="bg-green-200 m-4 border-1"
+							/>
+							<button
+								type="submit"
+								class="text-[#DDB771] bg-[#073b3a] w-fit pl-8 pr-8 pt-2 pb-2"
+							>
+								Login now!
+							</button>
+						</form>
+						<!-- added another div for links to webpages -->
+						<div class="flex justify-evenly pb-4 text-[#DDB771]">
+							<a href="src/register.html">Register</a>
+							<a href="src/resetPassword.html">Reset Password</a>
+						</div>
+					</section>
+				</div>
 
-          <!-- content -->
-          <div class="fixed top-20 right-0 h-1/2 w-64 bg-[#073b3a] text-gray-100 shadow-md transform translate-x-full 
-          peer-checked:translate-x-0 transition-transform  duration-300 z-50 ">
-          <section class="pt-16 pb-16">
-      <form
-        class="p-4 flex flex-col justify-center items-center text-center  text-[#DDB771]"
-      >
-        <label for="name">Enter your name here:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          required
-          class="bg-green-200 m-4 border-1"
-        />
-        <label for="email">Enter your E-Mail here:</label>
-        <input
-          type="text"
-          id="email"
-          name="email"
-          required
-          class="bg-green-200 m-4 border-1"
-        />
-        <button
-          type="submit"
-          class="text-[#DDB771] bg-[#073b3a] w-fit pl-8 pr-8 pt-2 pb-2"
-        >
-          Register now!
-        </button>
-      </form>
-    </section>
-          </div>
-      
-          <!-- Footer if wanted 
-              <div class="p-4 border-t border-green-800 text-sm text-gray-400">
-                  <p> </p>
-                  <a> </a>
-              </div>-->
-      </div>
-  </div>
-</header>
+				<!-- Footer if wanted 
+                <div class="p-4 border-t border-green-800 text-sm text-gray-400">
+                    <p> </p>
+                    <a> </a>
+                </div>-->
+			</div>
+		</div>
+	</header>
 
-<body class="bg-green-50 text-gray-800 font-sans">
+	<body class="bg-green-50 text-gray-800 font-sans">
+		<!-- Header with headline and image side by side -->
+		<header
+			class="flex items-center justify-between bg-green-100 p-6 border-b-2 border-green-700 max-w-4xl mx-auto"
+		>
+			<h1 class="text-3xl font-bold text-green-900">Sunrise Orchards</h1>
+			<img
+				src="https://cdn-icons-png.flaticon.com/512/2909/2909804.png"
+				alt="Sunrise Orchards Logo"
+				class="w-20 h-20 object-contain"
+			/>
+		</header>
 
-  <!-- Header with headline and image side by side -->
-  <header class="flex items-center justify-between bg-green-100 p-6 border-b-2 border-green-700 max-w-4xl mx-auto">
-    <h1 class="text-3xl font-bold text-green-900">Sunrise Orchards</h1>
-    <img src="https://cdn-icons-png.flaticon.com/512/2909/2909804.png"
-         alt="Sunrise Orchards Logo"
-         class="w-20 h-20 object-contain" />
-  </header>
+		<!-- Main content -->
+		<main class="max-w-4xl mx-auto p-6 space-y-6">
+			<!-- Introduction -->
+			<p class="text-lg">
+				Sunrise Orchards offers the freshest seasonal fruits harvested
+				at peak ripeness, straight from our family-run orchards. Taste
+				the difference of quality fruit, cider, and preserves made with
+				care.
+			</p>
 
-  <!-- Main content -->
-  <main class="max-w-4xl mx-auto p-6 space-y-6">
+			<!-- Products -->
+			<section>
+				<h2 class="text-xl font-semibold text-green-800 mb-2">
+					What We Offer:
+				</h2>
+				<ul class="list-disc list-inside space-y-1">
+					<li>Seasonal fruits</li>
+					<li>Apple cider</li>
+					<li>Fruit preserves</li>
+					<li>Fresh fruit baskets</li>
+					<li>Local honey</li>
+				</ul>
+			</section>
 
-    <!-- Introduction -->
-    <p class="text-lg">
-      Sunrise Orchards offers the freshest seasonal fruits harvested at peak ripeness, straight from our family-run orchards.
-      Taste the difference of quality fruit, cider, and preserves made with care.
-    </p>
+			<!-- Hashtags -->
+			<section class="bg-green-100">
+				<div class="flex flex-wrap gap-3">
+					<a
+						href="#"
+						class="px-3 py-1 bg-green-300 text-green-900 rounded hover:bg-green-400 transition"
+						>Orchard Fresh</a
+					>
+					<a
+						href="#"
+						class="px-3 py-1 bg-green-300 text-green-900 rounded hover:bg-green-400 transition"
+						>Apple Cider</a
+					>
+					<a
+						href="#"
+						class="px-3 py-1 bg-green-300 text-green-900 rounded hover:bg-green-400 transition"
+						>Seasonal Fruit</a
+					>
+					<a
+						href="#"
+						class="px-3 py-1 bg-green-300 text-green-900 rounded hover:bg-green-400 transition"
+						>Preserves</a
+					>
+					<a
+						href="#"
+						class="px-3 py-1 bg-green-300 text-green-900 rounded hover:bg-green-400 transition"
+						>Honey</a
+					>
+				</div>
+			</section>
 
-    <!-- Products -->
-    <section>
-      <h2 class="text-xl font-semibold text-green-800 mb-2">What We Offer:</h2>
-      <ul class="list-disc list-inside space-y-1">
-        <li>Seasonal fruits</li>
-        <li>Apple cider</li>
-        <li>Fruit preserves</li>
-        <li>Fresh fruit baskets</li>
-        <li>Local honey</li>
-      </ul>
-    </section>
+			<!-- Address and Opening Hours -->
+			<section
+				class="flex flex-col sm:flex-row sm:items-center sm:justify-between border-t pt-4 border-green-300"
+			>
+				<div class="mb-4 sm:mb-0">
+					<h3 class="font-semibold text-green-800">Address:</h3>
+					<a
+						href="https://maps.google.com/?q=456 Orchard Road, Townsville"
+						target="_blank"
+						class="text-blue-600 underline"
+					>
+						456 Orchard Road, Townsville
+					</a>
+				</div>
+				<div>
+					<h3 class="font-semibold text-green-800">Opening Hours:</h3>
+					<p>Mon–Sat: 9:00 AM – 5:00 PM</p>
+					<p>Sun: Closed</p>
+				</div>
+			</section>
+		</main>
+		<footer
+			class="flex flex-col items-center p-8 pb-12 bg-[#073b3a] w-[100%] text-slate-50"
+		>
+			<h2 class="pb-8">Contact Us</h2>
+			<!-- Section for contact information -->
+			<section class="mb-8">
+				<span class="text-xl font-bold">Adress Information</span>
+				<!-- use an unordered list -->
+				<ul class="list-none mt-4">
+					<!-- nest span inside list element for styling -->
+					<li>
+						<span class="font-bold">Owner:</span> Some Random Person
+					</li>
+					<li>
+						<span class="font-bold">Street:</span> Somewhere in
+						nowhere
+					</li>
+					<li>
+						<span class="font-bold">City:</span> Sme random town
+					</li>
+				</ul>
+			</section>
 
-    <!-- Hashtags -->
-    <section class="bg-green-100">
-      <div class="flex flex-wrap gap-3">
-        <a href="#" class="px-3 py-1 bg-green-300 text-green-900 rounded hover:bg-green-400 transition">Orchard Fresh</a>
-        <a href="#" class="px-3 py-1 bg-green-300 text-green-900 rounded hover:bg-green-400 transition">Apple Cider</a>
-        <a href="#" class="px-3 py-1 bg-green-300 text-green-900 rounded hover:bg-green-400 transition">Seasonal Fruit</a>
-        <a href="#" class="px-3 py-1 bg-green-300 text-green-900 rounded hover:bg-green-400 transition">Preserves</a>
-        <a href="#" class="px-3 py-1 bg-green-300 text-green-900 rounded hover:bg-green-400 transition">Honey</a>
-      </div>
-    </section>
-
-    <!-- Address and Opening Hours -->
-    <section class="flex flex-col sm:flex-row sm:items-center sm:justify-between border-t pt-4 border-green-300">
-      <div class="mb-4 sm:mb-0">
-        <h3 class="font-semibold text-green-800">Address:</h3>
-        <a href="https://maps.google.com/?q=456 Orchard Road, Townsville" target="_blank" class="text-blue-600 underline">
-          456 Orchard Road, Townsville
-        </a>
-      </div>
-      <div>
-        <h3 class="font-semibold text-green-800">Opening Hours:</h3>
-        <p>Mon–Sat: 9:00 AM – 5:00 PM</p>
-        <p>Sun: Closed</p>
-      </div>
-    </section>
-
-  </main>
-  <footer
-  class="flex flex-col items-center p-8 pb-12 bg-[#073b3a] w-[100%] text-slate-50"
->
-<h2 class="pb-8">Contact Us</h2>
-<!-- Section for contact information -->
-<section class="mb-8">
-  <span class="text-xl font-bold">Adress Information</span>
-  <!-- use an unordered list -->
-  <ul class="list-none mt-4">
-    <!-- nest span inside list element for styling -->
-    <li>
-      <span class="font-bold">Owner:</span> Some Random Person
-    </li>
-    <li>
-      <span class="font-bold">Street:</span> Somewhere in
-      nowhere
-    </li>
-    <li>
-      <span class="font-bold">City:</span> Sme random town
-    </li>
-  </ul>
-</section>
-
-<!-- Section for links and nested images -->
-<section class="flex flex-row size-[100%] justify-around">
-  <a href="https://www.instagram.com/">
-    <img
-      src="https://static.cdninstagram.com/rsrc.php/v4/yI/r/VsNE-OHk_8a.png"
-      alt="Instagram"
-      class="w-10 h-10"
-    />
-  </a>
-  <a href="https://www.facebook.de">
-    <img
-      src="https://www.facebook.com/images/fb_icon_325x325.png"
-      alt="Facebook"
-      class="w-10 h-10"
-    />
-  </a>
-  <a href="https://www.youtube.com">
-    <img
-      src="https://www.youtube.com/s/desktop/2253fa3d/img/logos/favicon.ico"
-      alt="Youtube"
-      class="w-10 h-10"
-    />
-  </a>
-  <a href="https://www.linkedin.com">
-    <img
-      src="https://static.licdn.com/aero-v1/sc/h/5bukxbhy9xsil5mb7c2wulfbx"
-      alt="linkedIn"
-      class="w-10 h-10"
-    />
-  </a>
-</section>
-</footer>
-</body>
+			<!-- Section for links and nested images -->
+			<section class="flex flex-row size-[100%] justify-around">
+				<a href="https://www.instagram.com/">
+					<img
+						src="https://static.cdninstagram.com/rsrc.php/v4/yI/r/VsNE-OHk_8a.png"
+						alt="Instagram"
+						class="w-10 h-10"
+					/>
+				</a>
+				<a href="https://www.facebook.de">
+					<img
+						src="https://www.facebook.com/images/fb_icon_325x325.png"
+						alt="Facebook"
+						class="w-10 h-10"
+					/>
+				</a>
+				<a href="https://www.youtube.com">
+					<img
+						src="https://www.youtube.com/s/desktop/2253fa3d/img/logos/favicon.ico"
+						alt="Youtube"
+						class="w-10 h-10"
+					/>
+				</a>
+				<a href="https://www.linkedin.com">
+					<img
+						src="https://static.licdn.com/aero-v1/sc/h/5bukxbhy9xsil5mb7c2wulfbx"
+						alt="linkedIn"
+						class="w-10 h-10"
+					/>
+				</a>
+			</section>
+		</footer>
+	</body>
 </html>
