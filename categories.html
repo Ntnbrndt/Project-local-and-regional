@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Start</title>
+		<style>
+			.scrollbar-hide {
+				scrollbar-width: none; /* Firefox */
+				-ms-overflow-style: none; /* IE/Edge */
+			}
+			.scrollbar-hide::-webkit-scrollbar {
+				display: none; /* Chrome, Safari, Opera */
+			}
+		</style>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	</head>
 
-<head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Start</title>
-     <style>
-        .scrollbar-hide {
-          scrollbar-width: none; /* Firefox */
-          -ms-overflow-style: none;  /* IE/Edge */
-        }
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none; /* Chrome, Safari, Opera */
-        }
-      </style>      
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-
-<!-- colors: {
+	<!-- colors: {
         'midnight-green': '#073b3a',
         'dartmouth-green': '#0b6E4F',
         'pigment-green': '#08A045',
@@ -30,8 +29,7 @@
       },
 -->
 
-<header class="bg-[#073b3a] text-[#DDB771] ">
-
+	<header class="bg-[#073b3a] text-[#DDB771]">
 		<div
 			class="flex items-center justify-between gap-4 max-w-screen-xl mx-auto"
 		>
@@ -40,45 +38,84 @@
 				<!-- checks state -->
 				<input type="checkbox" id="menu-toggle" class="peer hidden" />
 
-            <!-- menubutton -->
-            <label for="menu-toggle" class="p-4 text-[#9EC5AB]">
-                <!-- 3 horizontal stripes -->
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </label>
+				<!-- menubutton -->
+				<label for="menu-toggle" class="p-4 text-[#9EC5AB]">
+					<!-- 3 horizontal stripes -->
+					<svg
+						class="w-6 h-6"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						viewBox="0 0 24 24"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M4 6h16M4 12h16M4 18h16"
+						/>
+					</svg>
+				</label>
 
-            <!-- Menu Sidebar-->
-            <div class="fixed top-20 left-0 h-1/2 w-64 bg-[#073b3a] text-gray-100 shadow-md transform -translate-x-full 
-            peer-checked:translate-x-0 transition-transform  duration-300 z-50 ">
-                <div class="p-4">
-                    <ul class="space-y-4">
-                        <li><a href="index.html" class="block text-[#DDB771]">Home</a></li>
-                        <li><a href="categories.html" class="block text-[#DDB771]">Categories</a></li>
-                        <li><a href="#" class="block text-[#DDB771]">Vendors</a></li>
-                        <li><a href="#" class="block text-[#DDB771]">Blog</a></li>
-                        <li><a href="#" class="block text-[#DDB771]">Settings</a></li>
-                    </ul>
-                </div>
+				<!-- Menu Sidebar-->
+				<div
+					class="fixed top-20 left-0 h-1/2 w-64 bg-[#073b3a] text-gray-100 shadow-md transform -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 z-50"
+				>
+					<div class="p-4">
+						<ul class="space-y-4">
+							<li>
+								<a
+									href="../index.html"
+									class="block text-[#DDB771]"
+									>Home</a
+								>
+							</li>
+							<li>
+								<a
+									href="../categories.html"
+									class="block text-[#DDB771]"
+									>Categories</a
+								>
+							</li>
+							<li>
+								<a href="#" class="block text-[#DDB771]"
+									>Vendors</a
+								>
+							</li>
+							<li>
+								<a
+									href="src/blog.html"
+									class="block text-[#DDB771]"
+									>Blog</a
+								>
+							</li>
+							<li>
+								<a href="#" class="block text-[#DDB771]"
+									>Settings</a
+								>
+							</li>
+						</ul>
+					</div>
 
-                <div class="p-4 border-t border-[#9EC5AB] text-sm text-[#9EC5AB]">
-                    <p>&copy; 2025 Flori and Toni learn Webdesign</p>
-                    <a href="#" class="hover:text-green-200 block mt-2">Privacy Policy</a>
-                </div>
-            </div>
-        </div>
+					<div
+						class="p-4 border-t border-[#9EC5AB] text-sm text-[#9EC5AB]"
+					>
+						<p>&copy; 2025 Flori and Toni learn Webdesign</p>
+						<a href="#" class="hover:text-green-200 block mt-2"
+							>Privacy Policy</a
+						>
+					</div>
+				</div>
+			</div>
 
-    
-        <!-- locationsearchbar-->
-        <div class="relative w-full max-w-md mx-auto p-4 text-[#DDB771]">
-            <input
-            id="search-input"
-            type="text"
-            placeholder="Enter postal code or city"
-            class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#073b3a] placeholder-[#DDB771]"
-            autocomplete="off"
-            />
-
+			<!-- locationsearchbar-->
+			<div class="relative w-full max-w-md mx-auto p-4 text-[#DDB771]">
+				<input
+					id="search-input"
+					type="text"
+					placeholder="Enter postal code or city"
+					class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#073b3a] placeholder-[#DDB771]"
+					autocomplete="off"
+				/>
 
 				<!-- Search icon -->
 				<svg
@@ -109,240 +146,295 @@
             <ul id="suggestions" class="absolute left-0 right-0 mt-1 bg-white border border-gray-300 rounded-md shadow-lg z-10 hidden">
             Suggestions will be injected here 
             </ul>-->
-          
-        </div>
-        
-            
-        <div class="relative right-3">
-            <!-- checks state -->
-            <input type="checkbox" id="right-menu-toggle" class="peer hidden">
+			</div>
 
-            <!-- login button -->
-            <label for="right-menu-toggle" >
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAmVBMVEVonzn///9onzdlnjRhmi77/Plxo0Sgw4PN373o8OP///3v9OvV5MhfmyttoT1qnjmQum/d69KlxYjp9eL7/fbE2q5vnjxjmjJaliNblitmoTFpnT5soz12p0x8qVF7p1N1rFCFtGK00Z/A16mpyI+exH7T5MLr7+Hs9+ttpkabwIVqnjKkxYLc7df/+v+TuGp6qkXB1bGPtXFIlJ12AAACpUlEQVR4nO3cb1OiQBzA8XUX/8EJpiQmcmWaonhavf8Xd0t2zU15cjTMwK++n5p44oP9zu4COQNKAQAAAAAAAAAAAAAAAAAAAAAAAAAAAFBBrLQZGKNNFJnIHowKAl33qCqkdRA50+ng5uZmag9OpGcqDrK6h1Wl2WzeSZKft3eJdXeXdIz2M7Ote1gVMvPF6H55fbJcrhZBpDMT1z2s6uio0+31vTAM21borR8mjjFfqtDp7Nee2zpxw6uuLdTar3tc1dGOv+9t2q4bui23HaY/8kKlg7rHVR3tbO0qbbda7XwOQy8vVCr7EoWna55xOqdCu0Rtpi30B/qLXA//XagoFIJC+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiU712hm//kzwEH+VOyBfJ3MaiXY5N9KGy9POm8mwxUrArGHtgPBIHAQteu0l08MMoUTaIxyo/jhj/xfW4ObeFDNJ0OiuQfMabhU/jxTHOaw+5k6mRZdFlml6iZNT3xbGG7/zTqjkb71eiy1W6YNP7NEuf2oU30xuN0M07HF6Xpr/tj0vTXg5zbh66b/xY7tLyn46OUc+lk/7ZKS/Cuj4+ZkEL/odcP3XJs4dNzEsi4WkTJLp/DcrPouqktbPqp5q99uMn3YTnp0u5DU3NCgbdVul9v2u6hVN/hkK9SX8Y+jJLRuv+JObSFUu7atsP73lVp69Viq6OaEwqcCu3NV2dxtIZlPD8Pbzvzpt+1/aEj43xCpBv//+ErO86Xm+lyeZaUQLtYX5erzt8K+X9/hKR9H/O6B4CqFH0z8+67NgAAAAAAAAAAAAAAAAAAAAAAAAD4Ln4DSDNeY8KWhxkAAAAASUVORK5CYII=" 
-                alt="log in/profile"  
-                class="w-10 rounded-full border-2 border-[#9EC5AB]">
-            </label>
+			<div class="relative right-3">
+				<!-- checks state -->
+				<input
+					type="checkbox"
+					id="right-menu-toggle"
+					class="peer hidden"
+				/>
 
-            <!-- content -->
-            <div class="fixed top-20 right-0 h-1/2 w-64 bg-[#073b3a] text-gray-100 shadow-md transform translate-x-full 
-            peer-checked:translate-x-0 transition-transform  duration-300 z-50 ">
-            <section class="pt-16 pb-16">
-				<form
-					class="p-4 flex flex-col justify-center items-center text-center  text-[#DDB771]"
+				<!-- login button -->
+				<label for="right-menu-toggle">
+					<img
+						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAmVBMVEVonzn///9onzdlnjRhmi77/Plxo0Sgw4PN373o8OP///3v9OvV5MhfmyttoT1qnjmQum/d69KlxYjp9eL7/fbE2q5vnjxjmjJaliNblitmoTFpnT5soz12p0x8qVF7p1N1rFCFtGK00Z/A16mpyI+exH7T5MLr7+Hs9+ttpkabwIVqnjKkxYLc7df/+v+TuGp6qkXB1bGPtXFIlJ12AAACpUlEQVR4nO3cb1OiQBzA8XUX/8EJpiQmcmWaonhavf8Xd0t2zU15cjTMwK++n5p44oP9zu4COQNKAQAAAAAAAAAAAAAAAAAAAAAAAAAAAFBBrLQZGKNNFJnIHowKAl33qCqkdRA50+ng5uZmag9OpGcqDrK6h1Wl2WzeSZKft3eJdXeXdIz2M7Ote1gVMvPF6H55fbJcrhZBpDMT1z2s6uio0+31vTAM21borR8mjjFfqtDp7Nee2zpxw6uuLdTar3tc1dGOv+9t2q4bui23HaY/8kKlg7rHVR3tbO0qbbda7XwOQy8vVCr7EoWna55xOqdCu0Rtpi30B/qLXA//XagoFIJC+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiUj0L5KJSPQvkolI9C+SiU712hm//kzwEH+VOyBfJ3MaiXY5N9KGy9POm8mwxUrArGHtgPBIHAQteu0l08MMoUTaIxyo/jhj/xfW4ObeFDNJ0OiuQfMabhU/jxTHOaw+5k6mRZdFlml6iZNT3xbGG7/zTqjkb71eiy1W6YNP7NEuf2oU30xuN0M07HF6Xpr/tj0vTXg5zbh66b/xY7tLyn46OUc+lk/7ZKS/Cuj4+ZkEL/odcP3XJs4dNzEsi4WkTJLp/DcrPouqktbPqp5q99uMn3YTnp0u5DU3NCgbdVul9v2u6hVN/hkK9SX8Y+jJLRuv+JObSFUu7atsP73lVp69Viq6OaEwqcCu3NV2dxtIZlPD8Pbzvzpt+1/aEj43xCpBv//+ErO86Xm+lyeZaUQLtYX5erzt8K+X9/hKR9H/O6B4CqFH0z8+67NgAAAAAAAAAAAAAAAAAAAAAAAAD4Ln4DSDNeY8KWhxkAAAAASUVORK5CYII="
+						alt="log in/profile"
+						class="w-10 rounded-full border-2 border-[#9EC5AB]"
+					/>
+				</label>
+
+				<!-- content -->
+				<div
+					class="fixed top-20 right-0 h-1/2 w-64 bg-[#073b3a] text-gray-100 shadow-md transform translate-x-full peer-checked:translate-x-0 transition-transform duration-300 z-50"
 				>
-					<label for="name">Enter your name here:</label>
-					<input
-						type="text"
-						id="name"
-						name="name"
-						required
-						class="bg-green-200 m-4 border-1"
-					/>
-					<label for="email">Enter your E-Mail here:</label>
-					<input
-						type="text"
-						id="email"
-						name="email"
-						required
-						class="bg-green-200 m-4 border-1"
-					/>
-					<button
-						type="submit"
-						class="text-[#DDB771] bg-[#073b3a] w-fit pl-8 pr-8 pt-2 pb-2"
-					>
-						Register now!
-					</button>
-				</form>
-			</section>
-            </div>
-        
-            <!-- Footer if wanted 
+					<section class="pt-16 pb-16">
+						<form
+							class="p-4 flex flex-col justify-center items-center text-center text-[#DDB771]"
+						>
+							<label for="name">Enter your name here:</label>
+							<input
+								type="text"
+								id="name"
+								name="name"
+								required
+								class="bg-green-200 m-4 border-1"
+							/>
+							<label for="email">Enter your E-Mail here:</label>
+							<input
+								type="text"
+								id="email"
+								name="email"
+								required
+								class="bg-green-200 m-4 border-1"
+							/>
+							<button
+								type="submit"
+								class="text-[#DDB771] bg-[#073b3a] w-fit pl-8 pr-8 pt-2 pb-2"
+							>
+								Login now!
+							</button>
+						</form>
+						<!-- added another div for links to webpages -->
+						<div class="flex justify-evenly pb-4 text-[#DDB771]">
+							<a href="src/register.html">Register</a>
+							<a href="src/resetPassword.html">Reset Password</a>
+						</div>
+					</section>
+				</div>
+
+				<!-- Footer if wanted 
                 <div class="p-4 border-t border-green-800 text-sm text-gray-400">
                     <p> </p>
                     <a> </a>
                 </div>-->
-        </div>
-    </div>
-</header>
+			</div>
+		</div>
+	</header>
 
-<body class="bg-green-200">
-  <h1 class="p-4 text-xl font-semibold text-center">Community Services & Sharing Opportunities</h1>
+	<body class="bg-green-200">
+		<h1 class="p-4 text-xl font-semibold text-center">
+			Community Services & Sharing Opportunities
+		</h1>
 
-  <section class="p-6 space-y-6">
-    <!-- Category: Sharing & Swaps -->
-    <a href="sharing.html" class="block transition transform duration-150 ease-in-out active:scale-95 focus:scale-95">
-      <div class="flex flex-row-reverse items-center border-2 border-green-700 rounded-lg p-4 bg-white hover:shadow-lg hover:scale-[1.01] cursor-pointer">
-        <img src="https://static.thenounproject.com/png/244919-200.png" alt="Sharing & Swaps"
-             class="w-1/5 h-1/5 object-contain rounded-md bg-gray-100 ml-6" />
-        <div>
-          <h3 class="text-xl font-semibold text-green-900">Sharing & Swaps</h3>
-          <ul class="list-disc list-inside text-gray-700 mt-2">
-            <li>Tool and equipment sharing</li>
-            <li>Book and clothing swaps</li>
-            <li>Community lending</li>
-          </ul>
-        </div>
-      </div>
-    </a>
+		<section class="p-6 space-y-6">
+			<!-- Category: Sharing & Swaps -->
+			<a
+				href="sharing.html"
+				class="block transition transform duration-150 ease-in-out active:scale-95 focus:scale-95"
+			>
+				<div
+					class="flex flex-row-reverse items-center border-2 border-green-700 rounded-lg p-4 bg-white hover:shadow-lg hover:scale-[1.01] cursor-pointer"
+				>
+					<img
+						src="https://static.thenounproject.com/png/244919-200.png"
+						alt="Sharing & Swaps"
+						class="w-1/5 h-1/5 object-contain rounded-md bg-gray-100 ml-6"
+					/>
+					<div>
+						<h3 class="text-xl font-semibold text-green-900">
+							Sharing & Swaps
+						</h3>
+						<ul class="list-disc list-inside text-gray-700 mt-2">
+							<li>Tool and equipment sharing</li>
+							<li>Book and clothing swaps</li>
+							<li>Community lending</li>
+						</ul>
+					</div>
+				</div>
+			</a>
 
-    <!-- Category: Handcraft Experts -->
-    <a href="craftsexperts.html" class="block">
-      <div class="flex flex-row items-center border-2 border-green-700 rounded-lg p-4 bg-white hover:shadow-lg hover:scale-[1.01] cursor-pointer">
-        <img src="https://img.freepik.com/premium-vector/craftsman-cross-icon-design-perfect-craftsmanship-artisanal-brands_706143-4467.jpg"
-             alt="Handcraft Experts" class="w-1/5 h-1/5 object-contain rounded-md bg-gray-100 mr-6" />
-        <div>
-          <h3 class="text-xl font-semibold text-green-900">Handcraft Experts</h3>
-          <ul class="list-disc list-inside text-gray-700 mt-2">
-            <li>Locally made crafts</li>
-            <li>Traditional techniques</li>
-            <li>Creative commissions</li>
-          </ul>
-        </div>
-      </div>
-    </a>
+			<!-- Category: Handcraft Experts -->
+			<a href="craftsexperts.html" class="block">
+				<div
+					class="flex flex-row items-center border-2 border-green-700 rounded-lg p-4 bg-white hover:shadow-lg hover:scale-[1.01] cursor-pointer"
+				>
+					<img
+						src="https://img.freepik.com/premium-vector/craftsman-cross-icon-design-perfect-craftsmanship-artisanal-brands_706143-4467.jpg"
+						alt="Handcraft Experts"
+						class="w-1/5 h-1/5 object-contain rounded-md bg-gray-100 mr-6"
+					/>
+					<div>
+						<h3 class="text-xl font-semibold text-green-900">
+							Handcraft Experts
+						</h3>
+						<ul class="list-disc list-inside text-gray-700 mt-2">
+							<li>Locally made crafts</li>
+							<li>Traditional techniques</li>
+							<li>Creative commissions</li>
+						</ul>
+					</div>
+				</div>
+			</a>
 
-    <!-- Category: Repairs & Upcycling -->
-    <a href="repairs.html" class="block">
-      <div class="flex flex-row-reverse items-center border-2 border-green-700 rounded-lg p-4 bg-white hover:shadow-lg hover:scale-[1.01] cursor-pointer">
-        <img src="https://cdn1.vectorstock.com/i/1000x1000/91/95/upcycled-icon-vector-47879195.jpg"
-             alt="Repairs & Upcycling" class="w-1/5 h-1/5 object-contain rounded-md bg-gray-100 ml-6" />
-        <div>
-          <h3 class="text-xl font-semibold text-green-900">Repairs & Upcycling</h3>
-          <ul class="list-disc list-inside text-gray-700 mt-2">
-            <li>Fix and reuse</li>
-            <li>Creative repurposing</li>
-            <li>Reduce waste</li>
-          </ul>
-        </div>
-      </div>
-    </a>
+			<!-- Category: Repairs & Upcycling -->
+			<a href="repairs.html" class="block">
+				<div
+					class="flex flex-row-reverse items-center border-2 border-green-700 rounded-lg p-4 bg-white hover:shadow-lg hover:scale-[1.01] cursor-pointer"
+				>
+					<img
+						src="https://cdn1.vectorstock.com/i/1000x1000/91/95/upcycled-icon-vector-47879195.jpg"
+						alt="Repairs & Upcycling"
+						class="w-1/5 h-1/5 object-contain rounded-md bg-gray-100 ml-6"
+					/>
+					<div>
+						<h3 class="text-xl font-semibold text-green-900">
+							Repairs & Upcycling
+						</h3>
+						<ul class="list-disc list-inside text-gray-700 mt-2">
+							<li>Fix and reuse</li>
+							<li>Creative repurposing</li>
+							<li>Reduce waste</li>
+						</ul>
+					</div>
+				</div>
+			</a>
 
-    <!-- Category: Restaurants & Local Food -->
-    <a href="#" class="block">
-      <div class="flex flex-row items-center border-2 border-green-700 rounded-lg p-4 bg-white hover:shadow-lg hover:scale-[1.01] cursor-pointer">
-        <img src="https://www.creativefabrica.com/wp-content/uploads/2021/06/04/Restaurant-icon-10-Graphics-12908030-1-1-580x386.jpg"
-             alt="Restaurants & Local Food" class="w-1/5 h-1/5 object-contain rounded-md bg-gray-100 mr-6" />
-        <div>
-          <h3 class="text-xl font-semibold text-green-900">Restaurants & Local Food</h3>
-          <ul class="list-disc list-inside text-gray-700 mt-2">
-            <li>Locally sourced meals</li>
-            <li>Farm-to-table dining</li>
-            <li>Support small kitchens</li>
-          </ul>
-        </div>
-      </div>
-    </a>
+			<!-- Category: Restaurants & Local Food -->
+			<a href="#" class="block">
+				<div
+					class="flex flex-row items-center border-2 border-green-700 rounded-lg p-4 bg-white hover:shadow-lg hover:scale-[1.01] cursor-pointer"
+				>
+					<img
+						src="https://www.creativefabrica.com/wp-content/uploads/2021/06/04/Restaurant-icon-10-Graphics-12908030-1-1-580x386.jpg"
+						alt="Restaurants & Local Food"
+						class="w-1/5 h-1/5 object-contain rounded-md bg-gray-100 mr-6"
+					/>
+					<div>
+						<h3 class="text-xl font-semibold text-green-900">
+							Restaurants & Local Food
+						</h3>
+						<ul class="list-disc list-inside text-gray-700 mt-2">
+							<li>Locally sourced meals</li>
+							<li>Farm-to-table dining</li>
+							<li>Support small kitchens</li>
+						</ul>
+					</div>
+				</div>
+			</a>
 
-    <!-- Category: Workshops & Classes -->
-    <a href="#" class="block">
-      <div class="flex flex-row-reverse items-center border-2 border-green-700 rounded-lg p-4 bg-white hover:shadow-lg hover:scale-[1.01] cursor-pointer">
-        <img src="https://png.pngtree.com/png-vector/20230428/ourmid/pngtree-creative-workshop-line-icon-vector-png-image_6740078.png"
-             alt="Workshops & Classes" class="w-1/5 h-1/5 object-contain rounded-md bg-gray-100 ml-6" />
-        <div>
-          <h3 class="text-xl font-semibold text-green-900">Workshops & Classes</h3>
-          <ul class="list-disc list-inside text-gray-700 mt-2">
-            <li>Skill sharing</li>
-            <li>Creative activities</li>
-            <li>Community learning</li>
-          </ul>
-        </div>
-      </div>
-    </a>
+			<!-- Category: Workshops & Classes -->
+			<a href="#" class="block">
+				<div
+					class="flex flex-row-reverse items-center border-2 border-green-700 rounded-lg p-4 bg-white hover:shadow-lg hover:scale-[1.01] cursor-pointer"
+				>
+					<img
+						src="https://png.pngtree.com/png-vector/20230428/ourmid/pngtree-creative-workshop-line-icon-vector-png-image_6740078.png"
+						alt="Workshops & Classes"
+						class="w-1/5 h-1/5 object-contain rounded-md bg-gray-100 ml-6"
+					/>
+					<div>
+						<h3 class="text-xl font-semibold text-green-900">
+							Workshops & Classes
+						</h3>
+						<ul class="list-disc list-inside text-gray-700 mt-2">
+							<li>Skill sharing</li>
+							<li>Creative activities</li>
+							<li>Community learning</li>
+						</ul>
+					</div>
+				</div>
+			</a>
 
-    <!-- Category: Neighborhood Help -->
-    <a href="#" class="block">
-      <div class="flex flex-row items-center border-2 border-green-700 rounded-lg p-4 bg-white hover:shadow-lg hover:scale-[1.01] cursor-pointer">
-        <img src="https://cdn-icons-png.flaticon.com/512/3058/3058072.png"
-             alt="Neighborhood Help" class="w-1/5 h-1/5 object-contain rounded-md bg-gray-100 mr-6" />
-        <div>
-          <h3 class="text-xl font-semibold text-green-900">Neighborhood Help</h3>
-          <ul class="list-disc list-inside text-gray-700 mt-2">
-            <li>Errands & assistance</li>
-            <li>Help for elderly or disabled</li>
-            <li>Community connection</li>
-          </ul>
-        </div>
-      </div>
-    </a>
+			<!-- Category: Neighborhood Help -->
+			<a href="#" class="block">
+				<div
+					class="flex flex-row items-center border-2 border-green-700 rounded-lg p-4 bg-white hover:shadow-lg hover:scale-[1.01] cursor-pointer"
+				>
+					<img
+						src="https://cdn-icons-png.flaticon.com/512/3058/3058072.png"
+						alt="Neighborhood Help"
+						class="w-1/5 h-1/5 object-contain rounded-md bg-gray-100 mr-6"
+					/>
+					<div>
+						<h3 class="text-xl font-semibold text-green-900">
+							Neighborhood Help
+						</h3>
+						<ul class="list-disc list-inside text-gray-700 mt-2">
+							<li>Errands & assistance</li>
+							<li>Help for elderly or disabled</li>
+							<li>Community connection</li>
+						</ul>
+					</div>
+				</div>
+			</a>
 
-    <!-- Category: Carsharing -->
-    <a href="#" class="block">
-      <div class="flex flex-row-reverse items-center border-2 border-green-700 rounded-lg p-4 bg-white hover:shadow-lg hover:scale-[1.01] cursor-pointer">
-        <img src="https://media.istockphoto.com/id/1304099238/de/vektor/car-sharing-vektor-symbol.jpg?s=612x612&w=0&k=20&c=gOdYMr0lsgCFnJCxKubUkvhY_rRIh4jrenOFScE6Fz0="
-             alt="Carsharing" class="w-1/5 h-1/5 object-contain rounded-md bg-gray-100 ml-6" />
-        <div>
-          <h3 class="text-xl font-semibold text-green-900">Carsharing</h3>
-          <ul class="list-disc list-inside text-gray-700 mt-2">
-            <li>Eco-friendly commuting</li>
-            <li>Ride sharing</li>
-            <li>Lower transport costs</li>
-          </ul>
-        </div>
-      </div>
-    </a>
-  </section>
-</body>
+			<!-- Category: Carsharing -->
+			<a href="#" class="block">
+				<div
+					class="flex flex-row-reverse items-center border-2 border-green-700 rounded-lg p-4 bg-white hover:shadow-lg hover:scale-[1.01] cursor-pointer"
+				>
+					<img
+						src="https://media.istockphoto.com/id/1304099238/de/vektor/car-sharing-vektor-symbol.jpg?s=612x612&w=0&k=20&c=gOdYMr0lsgCFnJCxKubUkvhY_rRIh4jrenOFScE6Fz0="
+						alt="Carsharing"
+						class="w-1/5 h-1/5 object-contain rounded-md bg-gray-100 ml-6"
+					/>
+					<div>
+						<h3 class="text-xl font-semibold text-green-900">
+							Carsharing
+						</h3>
+						<ul class="list-disc list-inside text-gray-700 mt-2">
+							<li>Eco-friendly commuting</li>
+							<li>Ride sharing</li>
+							<li>Lower transport costs</li>
+						</ul>
+					</div>
+				</div>
+			</a>
+		</section>
+	</body>
 
+	<footer
+		class="flex flex-col items-center p-8 pb-12 bg-[#073b3a] w-[100%] text-slate-50"
+	>
+		<h2 class="pb-8">Contact Us</h2>
+		<!-- Section for contact information -->
+		<section class="mb-8">
+			<span class="text-xl font-bold">Adress Information</span>
+			<!-- use an unordered list -->
+			<ul class="list-none mt-4">
+				<!-- nest span inside list element for styling -->
+				<li>
+					<span class="font-bold">Owner:</span> Some Random Person
+				</li>
+				<li>
+					<span class="font-bold">Street:</span> Somewhere in nowhere
+				</li>
+				<li><span class="font-bold">City:</span> Sme random town</li>
+			</ul>
+		</section>
 
-
-
-
-
-<footer
-class="flex flex-col items-center p-8 pb-12 bg-[#073b3a] w-[100%] text-slate-50"
->
-<h2 class="pb-8">Contact Us</h2>
-<!-- Section for contact information -->
-<section class="mb-8">
-<span class="text-xl font-bold">Adress Information</span>
-<!-- use an unordered list -->
-<ul class="list-none mt-4">
-  <!-- nest span inside list element for styling -->
-  <li>
-    <span class="font-bold">Owner:</span> Some Random Person
-  </li>
-  <li>
-    <span class="font-bold">Street:</span> Somewhere in
-    nowhere
-  </li>
-  <li>
-    <span class="font-bold">City:</span> Sme random town
-  </li>
-</ul>
-</section>
-
-<!-- Section for links and nested images -->
-<section class="flex flex-row size-[100%] justify-around">
-<a href="https://www.instagram.com/">
-  <img
-    src="https://static.cdninstagram.com/rsrc.php/v4/yI/r/VsNE-OHk_8a.png"
-    alt="Instagram"
-    class="w-10 h-10"
-  />
-</a>
-<a href="https://www.facebook.de">
-  <img
-    src="https://www.facebook.com/images/fb_icon_325x325.png"
-    alt="Facebook"
-    class="w-10 h-10"
-  />
-</a>
-<a href="https://www.youtube.com">
-  <img
-    src="https://www.youtube.com/s/desktop/2253fa3d/img/logos/favicon.ico"
-    alt="Youtube"
-    class="w-10 h-10"
-  />
-</a>
-<a href="https://www.linkedin.com">
-  <img
-    src="https://static.licdn.com/aero-v1/sc/h/5bukxbhy9xsil5mb7c2wulfbx"
-    alt="linkedIn"
-    class="w-10 h-10"
-  />
-</a>
-</section>
-</footer>
-
+		<!-- Section for links and nested images -->
+		<section class="flex flex-row size-[100%] justify-around">
+			<a href="https://www.instagram.com/">
+				<img
+					src="https://static.cdninstagram.com/rsrc.php/v4/yI/r/VsNE-OHk_8a.png"
+					alt="Instagram"
+					class="w-10 h-10"
+				/>
+			</a>
+			<a href="https://www.facebook.de">
+				<img
+					src="https://www.facebook.com/images/fb_icon_325x325.png"
+					alt="Facebook"
+					class="w-10 h-10"
+				/>
+			</a>
+			<a href="https://www.youtube.com">
+				<img
+					src="https://www.youtube.com/s/desktop/2253fa3d/img/logos/favicon.ico"
+					alt="Youtube"
+					class="w-10 h-10"
+				/>
+			</a>
+			<a href="https://www.linkedin.com">
+				<img
+					src="https://static.licdn.com/aero-v1/sc/h/5bukxbhy9xsil5mb7c2wulfbx"
+					alt="linkedIn"
+					class="w-10 h-10"
+				/>
+			</a>
+		</section>
+	</footer>
 </html>
